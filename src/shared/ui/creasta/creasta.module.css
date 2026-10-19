@@ -1,9 +1,9 @@
 /*
  * Creastă surface — the site's signature material.
  *
- * A flat graphite plate whose top edge is a mountain ridge (Postăvarul, Tâmpa, the Carpathians over
- * Brașov), drawn with a hairline. On interactive surfaces the ridge line lights up in the accent
- * colour from left to right on hover and focus, like first light crossing the crest.
+ * A flat graphite plate with a single peak rising from its top edge (Tâmpa, over Brașov), drawn
+ * with a hairline. On interactive surfaces the outline lights up in the accent colour from left to
+ * right on hover and focus, like first light crossing the mountain.
  * Pure CSS: no pointer tracking, so it behaves the same with a mouse, a finger or a keyboard.
  *
  * Tunables (set as inline CSS variables or in a parent rule):
@@ -11,7 +11,7 @@
  *   --creasta-tint    colour wash over the plate (default: none)
  *   --creasta-base    the plate itself
  *   --creasta-blur    blur of what is behind the plate
- *   --creasta-cut     height of the ridge; --creasta-cut-tr sets it alone (0px = flat top)
+ *   --creasta-cut     height of the peak; --creasta-cut-tr sets it alone (0px = flat top)
  *   --creasta-cut-bl  optional chamfer on the bottom-left corner (default: none)
  */
 .surface {
@@ -20,12 +20,11 @@
   --_h: var(--creasta-cut-tr, var(--creasta-cut, 0.12rem));
   --_bl: var(--creasta-cut-bl, 0px);
   --_shape: polygon(
-    0 calc(var(--_h) * 0.8),
-    26% 0,
-    41% calc(var(--_h) * 0.55),
-    63% calc(var(--_h) * 0.12),
-    82% calc(var(--_h) * 0.62),
-    100% calc(var(--_h) * 0.3),
+    0 var(--_h),
+    58% var(--_h),
+    70% 0,
+    82% var(--_h),
+    100% var(--_h),
     100% 100%,
     var(--_bl) 100%,
     0 calc(100% - var(--_bl))
@@ -66,26 +65,24 @@
   /* A frame: the plate's outline with the same outline, one hairline smaller, cut out of it. */
   clip-path: polygon(
     evenodd,
-    0 calc(var(--_h) * 0.8),
-    26% 0,
-    41% calc(var(--_h) * 0.55),
-    63% calc(var(--_h) * 0.12),
-    82% calc(var(--_h) * 0.62),
-    100% calc(var(--_h) * 0.3),
+    0 var(--_h),
+    58% var(--_h),
+    70% 0,
+    82% var(--_h),
+    100% var(--_h),
     100% 100%,
     var(--_bl) 100%,
     0 calc(100% - var(--_bl)),
-    0 calc(var(--_h) * 0.8),
-    var(--_t) calc(var(--_h) * 0.8 + var(--_t) * 1.2),
-    26% calc(var(--_t) * 1.2),
-    41% calc(var(--_h) * 0.55 + var(--_t) * 1.2),
-    63% calc(var(--_h) * 0.12 + var(--_t) * 1.2),
-    82% calc(var(--_h) * 0.62 + var(--_t) * 1.2),
-    calc(100% - var(--_t)) calc(var(--_h) * 0.3 + var(--_t) * 1.2),
+    0 var(--_h),
+    var(--_t) calc(var(--_h) + var(--_t)),
+    58% calc(var(--_h) + var(--_t)),
+    70% calc(var(--_t) * 1.4),
+    82% calc(var(--_h) + var(--_t)),
+    calc(100% - var(--_t)) calc(var(--_h) + var(--_t)),
     calc(100% - var(--_t)) calc(100% - var(--_t)),
     calc(var(--_bl) + var(--_t) * 0.41) calc(100% - var(--_t)),
     var(--_t) calc(100% - var(--_bl) - var(--_t) * 0.41),
-    var(--_t) calc(var(--_h) * 0.8 + var(--_t) * 1.2)
+    var(--_t) calc(var(--_h) + var(--_t))
   );
 }
 

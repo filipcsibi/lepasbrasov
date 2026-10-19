@@ -21,8 +21,8 @@
   --color-accent: var(--color-freedom-blue);
   --color-accent-bright: #6aa3ee;
 
-  /* Ridge-topped shape for filled buttons and highlights outside a Creasta surface. */
-  --cut-sm: polygon(0 0.06rem, 26% 0, 41% 0.04rem, 63% 0.01rem, 82% 0.045rem, 100% 0.02rem, 100% 100%, 0 100%);
+  /* Peak-topped shape for filled buttons and highlights outside a Creasta surface. */
+  --cut-sm: polygon(0 0.06rem, 58% 0.06rem, 70% 0, 82% 0.06rem, 100% 0.06rem, 100% 100%, 0 100%);
 
   --color-black: var(--color-jet-black);
   --color-white: #fff;

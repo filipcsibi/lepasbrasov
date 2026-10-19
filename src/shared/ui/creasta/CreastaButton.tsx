@@ -27,7 +27,7 @@ export type CreastaButtonProps = InternalLinkProps | ExternalLinkProps | ActionP
 
 /**
  * The site-wide call-to-action button ("DESCOPERĂ MAI MULT", "CITEȘTE", …).
- * Creasta plate: the ridge line lights up from left to right on hover.
+ * Creasta plate: the outline lights up from left to right on hover.
  */
 export function CreastaButton(props: CreastaButtonProps) {
   const { children, className, tint, accent, size = "md" } = props;

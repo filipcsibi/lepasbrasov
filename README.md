@@ -11,7 +11,7 @@ What sets it apart:
   (`src/features/advisor`).
 - **LEPAS L6 PHEV and LEPAS L6 BEV are separate pages**, each with its own colour, figures and call-to-action, linked
   by a PHEV | BEV switch.
-- **Creastă** — the UI material: flat graphite plates whose top edge is a mountain ridge, lit in the accent colour from
+- **Creastă** — the UI material: flat graphite plates whose top edge is a single peak (Tâmpa), lit in the accent colour from
   left to right on hover and focus (`src/shared/ui/creasta`). The showroom's street signs the home page.
 
 ```bash
