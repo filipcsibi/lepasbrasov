@@ -18,9 +18,11 @@ export const siteConfig = {
     /** The showroom's street — shown as the site's signature next to the city name. */
     landmark: "Calea București 168",
     phone: "+40 732 336 300",
+    /** The phone number also answers on WhatsApp (international format, digits only). */
+    whatsapp: "40732336300",
     email: "sales@dipmotors.ro",
     /** Opening hours, one line per row, e.g. "Luni – Vineri: 9:00 – 18:00\nSâmbătă: 10:00 – 14:00". */
-    hours: "Luni – Vineri: 8:00 – 17:00",
+    hours: "Luni – Vineri: 8:30 – 17:00\nSâmbătă: 9:00 – 13:30",
     /** What the map on the contact page searches for. */
     mapsQuery: "Calea București nr. 168, Brașov",
     mapsUrl:
@@ -31,5 +33,9 @@ export const siteConfig = {
    * `{ id: "facebook", href: "https://…", icon: "/media/shared/icon_facebook.png" }`
    * (icons for facebook, tiktok, instagram and youtube are in `public/media/shared`).
    */
-  socials: [] as { id: string; href: string; icon: string }[],
+  socials: [
+    { id: "facebook", href: "https://www.facebook.com/lepasbrasov", icon: "/media/shared/icon_facebook.png" },
+    { id: "instagram", href: "https://www.instagram.com/lepasbrasov", icon: "/media/shared/icon_instagram.png" },
+    { id: "tiktok", href: "https://www.tiktok.com/@lepasbrasov", icon: "/media/shared/icon_tiktok.png" },
+  ] as { id: string; href: string; icon: string }[],
 } as const;

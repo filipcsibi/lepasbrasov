@@ -4,7 +4,7 @@
 
 Prezentele condiții generale stabilesc regulile de utilizare ale site-ului **[lepasbrasov.ro](https://lepasbrasov.ro)**, denumit în continuare „site-ul”, de către vizitatorii și utilizatorii săi.
 
-Site-ul **[lepasbrasov.ro](https://lepasbrasov.ro)** este deținut de compania DIP MOTORS SRL, cu sediul în Brașov, Calea București nr. 168, județul Brașov, înregistrată la Registrul Comerțului sub nr. [DE COMPLETAT], având cod unic de înregistrare [DE COMPLETAT].
+Site-ul **[lepasbrasov.ro](https://lepasbrasov.ro)** este deținut de compania DIP MOTORS SRL, cu sediul în Brașov, Calea București nr. 168, județul Brașov, înregistrată la Registrul Comerțului sub nr. J1994003749088, având cod unic de înregistrare RO6700690.
 
 **LEPAS BRAȘOV** este dealer autorizat al mărcii LEPAS în România, marcă aparținând producătorului **Chery Automobile Co., Ltd.**
 

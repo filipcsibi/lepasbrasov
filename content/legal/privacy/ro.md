@@ -2,7 +2,7 @@
 
 ## I. Informaţii generale
 
-Titularul prelucrării datelor este DIP MOTORS SRL (denumită în continuare LEPAS BRAȘOV), cu sediul în Brașov, Calea București nr. 168, județul Brașov, înregistrată la Registrul Comerțului sub nr. [DE COMPLETAT], având cod unic de înregistrare [DE COMPLETAT]. LEPAS BRAȘOV respectă dreptul persoanelor fizice la confidențialitatea datelor personale și este responsabilă, în calitate de operator de date, de prelucrarea datelor dumneavoastră cu caracter personal.
+Titularul prelucrării datelor este DIP MOTORS SRL (denumită în continuare LEPAS BRAȘOV), cu sediul în Brașov, Calea București nr. 168, județul Brașov, înregistrată la Registrul Comerțului sub nr. J1994003749088, având cod unic de înregistrare RO6700690. LEPAS BRAȘOV respectă dreptul persoanelor fizice la confidențialitatea datelor personale și este responsabilă, în calitate de operator de date, de prelucrarea datelor dumneavoastră cu caracter personal.
 
 Această politică descrie modul în care colectăm, utilizăm, protejăm și partajăm datele personale, precum și opțiunile și drepturile de care beneficiați conform legislației în vigoare.
 
@@ -157,6 +157,6 @@ Pentru exercitarea acestor drepturi sau informații suplimentare, ne puteți con
 
 Pentru orice întrebări sau solicitări legate de această politică și/sau prelucrarea datelor personale, vă rugăm să contactați:
 
-**DIP MOTORS SRL** Sediu: Brașov, Calea București nr. 168, județul Brașov, înregistrată la Registrul Comerțului sub nr. [DE COMPLETAT], având cod unic de înregistrare [DE COMPLETAT], email: [sales@dipmotors.ro](mailto:sales@dipmotors.ro)
+**DIP MOTORS SRL** Sediu: Brașov, Calea București nr. 168, județul Brașov, înregistrată la Registrul Comerțului sub nr. J1994003749088, având cod unic de înregistrare RO6700690, email: [sales@dipmotors.ro](mailto:sales@dipmotors.ro)
 
 **Ultima actualizare: 8 octombrie 2026**

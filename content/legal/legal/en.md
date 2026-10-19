@@ -4,7 +4,7 @@
 
 These general terms set out the rules under which visitors and users may use the website **[lepasbrasov.ro](https://lepasbrasov.ro)**, referred to below as "the site".
 
-The site **[lepasbrasov.ro](https://lepasbrasov.ro)** is owned by DIP MOTORS SRL, with its registered office in Brașov, Calea București nr. 168, Brașov county, registered with the Trade Register under no. J2004001409037, tax identification number [DE COMPLETAT].
+The site **[lepasbrasov.ro](https://lepasbrasov.ro)** is owned by DIP MOTORS SRL, with its registered office in Brașov, Calea București nr. 168, Brașov county, registered with the Trade Register under no. J2004001409037, tax identification number RO6700690.
 
 **LEPAS BRAȘOV** is an authorised dealer of the LEPAS brand in Romania, a brand belonging to the manufacturer **Chery Automobile Co., Ltd.**
 

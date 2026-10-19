@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/shared/ui/whatsapp/WhatsAppLink";
 import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/config/site";
@@ -54,6 +55,7 @@ export async function ContactPage() {
               <a href={`tel:${tel}`} className={styles.value}>
                 {showroom.phone}
               </a>
+              <WhatsAppLink number={showroom.whatsapp} label="WhatsApp" />
             </dd>
           </div>
         )}

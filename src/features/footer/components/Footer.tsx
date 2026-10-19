@@ -1,3 +1,4 @@
+import { WhatsAppLink } from "@/shared/ui/whatsapp/WhatsAppLink";
 import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
@@ -54,6 +55,7 @@ export async function Footer() {
             <li className={styles.address}>{siteConfig.showroom.address}</li>
             <li>
               <a href={`tel:${siteConfig.showroom.phone.replace(/\s+/g, "")}`}>{siteConfig.showroom.phone}</a>
+              <WhatsAppLink number={siteConfig.showroom.whatsapp} label="WhatsApp" size={18} />
             </li>
             <li>
               <a href={`mailto:${siteConfig.showroom.email}`}>{siteConfig.showroom.email}</a>

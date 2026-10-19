@@ -2,7 +2,7 @@
 
 ## I. General information
 
-The data controller is DIP MOTORS SRL (referred to below as LEPAS BRAȘOV), with its registered office in Brașov, Calea București nr. 168, Brașov county, registered with the Trade Register under no. J2004001409037, tax identification number [DE COMPLETAT]. LEPAS BRAȘOV respects individuals' right to the confidentiality of their personal data and is responsible, as data controller, for processing your personal data.
+The data controller is DIP MOTORS SRL (referred to below as LEPAS BRAȘOV), with its registered office in Brașov, Calea București nr. 168, Brașov county, registered with the Trade Register under no. J2004001409037, tax identification number RO6700690. LEPAS BRAȘOV respects individuals' right to the confidentiality of their personal data and is responsible, as data controller, for processing your personal data.
 
 This policy describes how we collect, use, protect and share personal data, as well as the choices and rights you have under the legislation in force.
 
@@ -157,6 +157,6 @@ To exercise these rights or for further information, you can contact us at: [**s
 
 For any questions or requests about this policy and/or the processing of personal data, please contact:
 
-**DIP MOTORS SRL** Registered office: Brașov, Calea București nr. 168, Brașov county, registered with the Trade Register under no. J2004001409037, tax identification number [DE COMPLETAT], e-mail: [sales@dipmotors.ro](mailto:sales@dipmotors.ro)
+**DIP MOTORS SRL** Registered office: Brașov, Calea București nr. 168, Brașov county, registered with the Trade Register under no. J2004001409037, tax identification number RO6700690, e-mail: [sales@dipmotors.ro](mailto:sales@dipmotors.ro)
 
 **Last updated: 8 October 2026**
