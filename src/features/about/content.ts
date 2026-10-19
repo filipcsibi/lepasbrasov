@@ -21,7 +21,7 @@ export const introductionContent = {
   },
   /** Chapter order, heading colour (brand palette) and text side. */
   chapters: [
-    { key: "city", color: "var(--color-freedom-blue)", glow: "#0c3a4a", align: "left" },
+    { key: "city", color: "var(--color-accent)", glow: "#0c3a4a", align: "left" },
     { key: "balance", color: "var(--color-panther-orange)", glow: "#4a3504", align: "right" },
     { key: "art", color: "var(--color-dynamic-red)", glow: "#3d0f0b", align: "left" },
     { key: "symbol", color: "var(--color-aurora-green)", glow: "#063a2c", align: "right" },

@@ -40,7 +40,7 @@ export function LamaButton(props: LamaButtonProps) {
     className,
   );
   const style = accent
-    ? ({ "--lama-accent": accent } as CSSProperties)
+    ? ({ "--lama-base": accent, "--lama-accent": accent } as CSSProperties)
     : tint
       ? ({ "--lama-base": tint, "--lama-accent": tint } as CSSProperties)
       : undefined;
