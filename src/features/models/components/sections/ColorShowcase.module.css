@@ -32,7 +32,7 @@
 
 /* Strip holding the picker. */
 .bar {
-  --lama-cut: 0px;
+  --lama-radius: 0;
   position: absolute !important;
   left: 0;
   right: 0;

@@ -1,5 +1,5 @@
 .form {
-  --lama-cut: 0.28rem;
+  --lama-radius: 0.22rem;
   --lama-tint: rgba(12, 14, 20, 0.62);
   --lama-blur: 22px;
   display: flex;
@@ -239,7 +239,7 @@
   .form {
     gap: 0.28rem;
     padding: 0.5rem 0.36rem 0.44rem;
-    --lama-cut: 0.4rem;
+    --lama-radius: 0.32rem;
   }
 
   .title {

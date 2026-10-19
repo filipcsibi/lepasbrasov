@@ -30,8 +30,7 @@
 }
 
 .panel {
-  --lama-cut-tr: 0.4rem;
-  --lama-cut-bl: 0px;
+  --lama-radius: 0 0.3rem 0.3rem 0;
   --lama-tint: rgba(10, 10, 10, 0.3);
   --lama-blur: 22px;
   position: relative;
@@ -192,7 +191,7 @@
 
 @media (max-width: 767px) {
   .panel {
-    --lama-cut-tr: 0px;
+    --lama-radius: 0;
     width: 100%;
   }
 

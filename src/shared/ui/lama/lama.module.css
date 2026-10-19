@@ -1,26 +1,24 @@
 /*
- * Lamă surface — the site's signature material.
+ * Lamă surface — the site's UI material.
  *
- * A square-cornered graphite plate with a hairline outline and a thin accent rule on its top edge:
- * a short tick at rest, drawn out along the whole edge on hover and focus, like a blade being
- * drawn. Interactive plates also take a faint accent wash. Pure CSS: no pointer tracking, so it
- * behaves the same with a mouse, a finger or a keyboard.
+ * Minimal and flat: a softly rounded graphite plate with a hairline outline, no ornaments. Interactive
+ * plates lighten their outline on hover and focus. Pure CSS: no pointer tracking, so it behaves the
+ * same with a mouse, a finger or a keyboard.
  *
  * Tunables (set as inline CSS variables or in a parent rule):
- *   --lama-accent  colour of the rule (default: the site accent)
+ *   --lama-accent  colour of focus rings and accent buttons (default: the site accent)
  *   --lama-tint    colour wash over the plate (default: none)
  *   --lama-base    the plate itself
  *   --lama-blur    blur of what is behind the plate
+ *   --lama-radius  corner radius (default 0.16rem)
  */
 .surface {
   --_accent: var(--lama-accent, var(--color-accent));
   --_tint: var(--lama-tint, transparent);
-  --lama-p: 0%;
+  --_r: var(--lama-radius, 0.16rem);
   position: relative;
   isolation: isolate;
-  transition:
-    --lama-p 0.6s var(--ease-out-expo),
-    transform 0.3s var(--ease-out-power2);
+  transition: transform 0.3s var(--ease-out-power2);
 }
 
 /* The plate, under the content. */
@@ -30,24 +28,23 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  border-radius: var(--_r);
   background: linear-gradient(var(--_tint), var(--_tint)), var(--lama-base, rgba(15, 17, 21, 0.88));
   -webkit-backdrop-filter: blur(var(--lama-blur, 8px));
   backdrop-filter: blur(var(--lama-blur, 8px));
-  transition: box-shadow 0.4s var(--ease-out-power2);
+  transition: background-color 0.35s var(--ease-out-power2);
 }
 
-/* The edge: a hairline, the short tick, and the rule drawn over it. */
+/* The hairline. */
 .surface::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background:
-    linear-gradient(var(--_accent), var(--_accent)) 0 0 / 0.36rem 2px no-repeat,
-    linear-gradient(var(--_accent), var(--_accent)) 0 0 / var(--lama-p) 2px no-repeat;
-  transition: border-color 0.4s var(--ease-out-power2);
+  border-radius: var(--_r);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: border-color 0.35s var(--ease-out-power2);
 }
 
 .dark {
@@ -59,26 +56,18 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .interactive:hover {
-    --lama-p: 100%;
-  }
-
-  .interactive:hover::before {
-    box-shadow: inset 0 100vmax 0 0 color-mix(in srgb, var(--_accent) 14%, transparent);
-  }
-
   .interactive:hover::after {
-    border-color: color-mix(in srgb, var(--_accent) 55%, rgba(255, 255, 255, 0.16));
+    border-color: rgba(255, 255, 255, 0.4);
   }
 }
 
 .interactive:focus-visible {
-  --lama-p: 100%;
   outline: none;
 }
 
 .interactive:focus-visible::after {
   border-color: var(--_accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--_accent) 45%, transparent);
 }
 
 .interactive:active {

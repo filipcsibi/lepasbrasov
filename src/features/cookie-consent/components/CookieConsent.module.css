@@ -1,5 +1,5 @@
 .banner {
-  --lama-cut: 0.24rem;
+  --lama-radius: 0.19rem;
   --lama-tint: rgba(20, 20, 20, 0.55);
   --lama-blur: 20px;
   position: fixed !important;
@@ -75,7 +75,7 @@
 }
 
 .dialog {
-  --lama-cut: 0.24rem;
+  --lama-radius: 0.19rem;
   --lama-tint: rgba(20, 20, 20, 0.7);
   --lama-blur: 24px;
   width: min(8rem, 100%);

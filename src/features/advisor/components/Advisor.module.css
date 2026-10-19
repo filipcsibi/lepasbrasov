@@ -42,7 +42,7 @@
 }
 
 .card {
-  --lama-cut: 0.24rem;
+  --lama-radius: 0.19rem;
   --lama-base: rgba(20, 21, 27, 0.9);
   padding: 0.44rem;
 }
@@ -257,7 +257,7 @@
   }
 
   .card {
-    --lama-cut: 0.32rem;
+    --lama-radius: 0.26rem;
     padding: 0.4rem 0.34rem;
   }
 

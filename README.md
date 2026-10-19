@@ -11,8 +11,8 @@ What sets it apart:
   (`src/features/advisor`).
 - **LEPAS L6 PHEV and LEPAS L6 BEV are separate pages**, each with its own colour, figures and call-to-action, linked
   by a PHEV | BEV switch.
-- **Lamă** — the UI material: square graphite plates with a hairline outline and a thin accent rule on the top edge,
-  drawn out along the whole edge on hover and focus (`src/shared/ui/lama`). The showroom's street signs the home page.
+- **Lamă** — the UI material: minimal flat graphite plates with a hairline outline and soft corners, pill-shaped
+  buttons (outline that fills white on hover, solid accent for the main action) (`src/shared/ui/lama`).
 
 ```bash
 npm install

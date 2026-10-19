@@ -1,7 +1,7 @@
 .dots {
   --progress: 0;
   --lama-tint: rgba(255, 255, 255, 0.06);
-  --lama-cut: 0.08rem;
+  --lama-radius: 0.06rem;
   display: inline-flex;
   align-items: center;
   padding: 0 0.1rem;

@@ -71,7 +71,7 @@
 }
 
 .card {
-  --lama-cut: 0.2rem;
+  --lama-radius: 0.16rem;
   --lama-base: rgba(22, 23, 29, 0.9);
   padding: 0.3rem 0.34rem;
 }
@@ -128,7 +128,7 @@
 }
 
 .map {
-  --lama-cut: 0.2rem;
+  --lama-radius: 0.16rem;
   --lama-base: rgba(22, 23, 29, 0.9);
   min-height: 4.6rem;
   overflow: hidden;
@@ -204,7 +204,7 @@
   }
 
   .card {
-    --lama-cut: 0.28rem;
+    --lama-radius: 0.22rem;
     padding: 0.34rem 0.32rem;
   }
 
@@ -226,7 +226,7 @@
   }
 
   .map {
-    --lama-cut: 0.28rem;
+    --lama-radius: 0.22rem;
     min-height: 7rem;
   }
 

@@ -1,4 +1,5 @@
 .switcher {
+  --lama-radius: 999px;
   --_w: 0.46rem;
   display: inline-grid;
   grid-auto-flow: column;

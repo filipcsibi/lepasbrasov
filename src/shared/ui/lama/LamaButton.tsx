@@ -8,7 +8,7 @@ import styles from "./LamaButton.module.css";
 type CommonProps = {
   children: ReactNode;
   className?: string;
-  /** Optional colour of the button's wash and accent rule, e.g. the section's brand colour. */
+  /** Optional solid colour of the button, e.g. the section's brand colour. */
   tint?: string;
   /** Colour of the accent rule, without filling the button. */
   accent?: string;
@@ -35,7 +35,7 @@ export function LamaButton(props: LamaButtonProps) {
   const style = accent
     ? ({ "--lama-accent": accent } as CSSProperties)
     : tint
-      ? ({ "--lama-tint": `color-mix(in srgb, ${tint} 42%, transparent)`, "--lama-accent": tint } as CSSProperties)
+      ? ({ "--lama-base": tint, "--lama-accent": tint } as CSSProperties)
       : undefined;
   const label = <span className={styles.label}>{children}</span>;
 
