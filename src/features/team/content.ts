@@ -19,7 +19,7 @@ export const teamMembers: TeamMember[] = [
     id: "cristian-tion",
     name: "Cristian Țion",
     role: "salesDirector",
-    photo: "/media/team/cristian-tion.jpg",
+    photo: "/media/team/cristian-tion-portrait-2.jpg",
   },
   {
     id: "bogdan-maraloiu",
