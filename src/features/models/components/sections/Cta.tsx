@@ -1,6 +1,6 @@
 "use client";
 
-import { LamaButton } from "@/shared/ui/lama";
+import { GlassButton } from "@/shared/ui/liquid-glass";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { Reveal } from "@/shared/ui/motion";
 import { useModel, useModelText } from "../../lib/model-context";
@@ -24,9 +24,9 @@ export function Cta({ section }: { section: CtaSection }) {
         </Reveal>
         <Reveal className={styles.actions} delay={0.16}>
           {section.actions.map((action, i) => (
-            <LamaButton key={action.labelKey} href={action.href} tint={i === 0 ? accent : undefined}>
+            <GlassButton key={action.labelKey} href={action.href} tint={i === 0 ? accent : undefined}>
               {t(action.labelKey)}
-            </LamaButton>
+            </GlassButton>
           ))}
         </Reveal>
       </div>

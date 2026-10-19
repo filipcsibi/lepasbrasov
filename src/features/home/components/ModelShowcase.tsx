@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getImageDimensions } from "@/shared/lib/image-dimensions";
-import { LamaButton } from "@/shared/ui/lama";
+import { GlassButton } from "@/shared/ui/liquid-glass";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { PinOnScroll, Reveal } from "@/shared/ui/motion";
 import type { ModelShowcaseItem } from "../content";
@@ -31,7 +31,7 @@ export async function ModelShowcase({ items }: { items: ModelShowcaseItem[] }) {
               </Reveal>
               {item.href && (
                 <Reveal delay={0.15} className={styles.cta}>
-                  <LamaButton href={item.href}>{tc(item.ctaKey ?? "discoverMore")}</LamaButton>
+                  <GlassButton href={item.href}>{tc(item.ctaKey ?? "discoverMore")}</GlassButton>
                 </Reveal>
               )}
             </div>

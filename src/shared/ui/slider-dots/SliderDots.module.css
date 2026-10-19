@@ -1,14 +1,13 @@
 .dots {
   --progress: 0;
-  --lama-tint: rgba(255, 255, 255, 0.06);
-  --lama-radius: 0.06rem;
+  --glass-tint: rgba(255, 255, 255, 0.06);
   display: inline-flex;
   align-items: center;
   padding: 0 0.1rem;
 }
 
 .dark {
-  --lama-tint: rgba(0, 0, 0, 0.08);
+  --glass-tint: rgba(0, 0, 0, 0.08);
 }
 
 /* One dash per slide, like the centre line of a road; the active one is longer and fills as the slide plays. */

@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/config/site";
 import { ContactForm } from "@/features/leads";
-import { lama, LamaButton } from "@/shared/ui/lama";
+import { glass, GlassButton } from "@/shared/ui/liquid-glass";
 import { ShowroomMap } from "./ShowroomMap";
 import styles from "./ContactPage.module.css";
 
@@ -21,11 +21,11 @@ export async function ContactPage() {
         <p className={styles.text}>{t("text")}</p>
         <div className={styles.actions}>
           {showroom.phone && (
-            <LamaButton externalHref={`tel:${tel}`} tint="var(--color-accent)">
+            <GlassButton externalHref={`tel:${tel}`} tint="var(--color-accent)">
               {t("call")}
-            </LamaButton>
+            </GlassButton>
           )}
-          <LamaButton href="/test-drive">{t("testDrive")}</LamaButton>
+          <GlassButton href="/test-drive">{t("testDrive")}</GlassButton>
         </div>
       </header>
 
@@ -35,7 +35,7 @@ export async function ContactPage() {
 
       <dl className={styles.details}>
         {showroom.address && (
-          <div className={clsx(lama.surface, styles.card)}>
+          <div className={clsx(glass.surface, styles.card)}>
             <dt>{t("address")}</dt>
             <dd>
               {showroom.address}
@@ -49,7 +49,7 @@ export async function ContactPage() {
           </div>
         )}
         {showroom.phone && (
-          <div className={clsx(lama.surface, styles.card)}>
+          <div className={clsx(glass.surface, styles.card)}>
             <dt>{t("phone")}</dt>
             <dd>
               <a href={`tel:${tel}`} className={styles.value}>
@@ -60,7 +60,7 @@ export async function ContactPage() {
           </div>
         )}
         {showroom.email && (
-          <div className={clsx(lama.surface, styles.card)}>
+          <div className={clsx(glass.surface, styles.card)}>
             <dt>{t("email")}</dt>
             <dd>
               <a href={`mailto:${showroom.email}`} className={styles.value}>
@@ -70,7 +70,7 @@ export async function ContactPage() {
           </div>
         )}
         {showroom.hours && (
-          <div className={clsx(lama.surface, styles.card)}>
+          <div className={clsx(glass.surface, styles.card)}>
             <dt>{t("hours")}</dt>
             <dd className={styles.hours}>{showroom.hours}</dd>
           </div>

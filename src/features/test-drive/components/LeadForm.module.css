@@ -1,7 +1,6 @@
 .form {
-  --lama-radius: 0.22rem;
-  --lama-tint: rgba(12, 14, 20, 0.62);
-  --lama-blur: 22px;
+  --glass-tint: rgba(12, 14, 20, 0.62);
+  --glass-blur: 22px;
   display: flex;
   flex-direction: column;
   gap: 0.16rem;
@@ -239,7 +238,6 @@
   .form {
     gap: 0.28rem;
     padding: 0.5rem 0.36rem 0.44rem;
-    --lama-radius: 0.32rem;
   }
 
   .title {

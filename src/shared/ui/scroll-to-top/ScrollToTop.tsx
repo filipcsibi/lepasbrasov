@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { useLenis } from "@/shared/providers/SmoothScrollProvider";
-import { lama } from "@/shared/ui/lama";
+import { glass } from "@/shared/ui/liquid-glass";
 import styles from "./ScrollToTop.module.css";
 
 export function ScrollToTop() {
@@ -28,7 +28,7 @@ export function ScrollToTop() {
     <button
       type="button"
       aria-label={t("scrollToTop")}
-      className={clsx(lama.surface, lama.interactive, styles.button)}
+      className={clsx(glass.surface, glass.interactive, styles.button)}
       data-visible={visible || undefined}
       onClick={toTop}
     >

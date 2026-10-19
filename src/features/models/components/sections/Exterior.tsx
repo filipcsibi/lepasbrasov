@@ -7,7 +7,7 @@ import { useState, type CSSProperties } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css/pagination";
-import { lama, LamaIconButton } from "@/shared/ui/lama";
+import { glass, GlassIconButton } from "@/shared/ui/liquid-glass";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { PinOnScroll } from "@/shared/ui/motion";
 import { useModelText } from "../../lib/model-context";
@@ -63,8 +63,8 @@ export function Exterior({ section }: { section: ExteriorSection }) {
           </div>
 
           {section.hotspots && (
-            <aside className={clsx(lama.surface, styles.panel)} aria-hidden={!open} inert={!open}>
-              <LamaIconButton
+            <aside className={clsx(glass.surface, styles.panel)} aria-hidden={!open} inert={!open}>
+              <GlassIconButton
                 icon="close"
                 label={ui("closeDetail")}
                 className={styles.close}

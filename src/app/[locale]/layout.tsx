@@ -7,6 +7,7 @@ import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
 import { MarketingScripts } from "@/features/analytics";
 import { CookieConsent } from "@/features/cookie-consent";
+import { LiquidGlassFilter } from "@/shared/ui/liquid-glass";
 import { SmoothScrollProvider } from "@/shared/providers/SmoothScrollProvider";
 import "swiper/css";
 import "@/shared/styles/globals.css";
@@ -47,6 +48,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
       <body>
         <NextIntlClientProvider>
           <SmoothScrollProvider>
+            <LiquidGlassFilter />
             {children}
             <CookieConsent />
             <MarketingScripts />

@@ -21,8 +21,7 @@
 
 /* Floating bar — hidden at the top, revealed once compact. */
 .bar {
-  --lama-radius: 999px;
-  --lama-tint: rgba(18, 18, 20, 0.42);
+  --glass-tint: rgba(18, 18, 20, 0.42);
   position: absolute !important;
   inset: 0.1rem calc(var(--page-gutter) - 0.24rem);
   opacity: 0;
@@ -67,7 +66,6 @@
 }
 
 .menuButton {
-  --lama-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 0.1rem;
@@ -127,7 +125,6 @@
 
 /* Shortcut to the contact page, always one tap away. */
 .contact {
-  --lama-radius: 999px;
   display: inline-flex;
   align-items: center;
   gap: 0.08rem;
@@ -176,7 +173,6 @@
   }
 
   .bar {
-    --lama-radius: 999px;
     inset: 0.14rem 0.14rem;
   }
 

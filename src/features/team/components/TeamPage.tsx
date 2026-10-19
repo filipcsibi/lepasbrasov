@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { LamaButton } from "@/shared/ui/lama";
+import { GlassButton } from "@/shared/ui/liquid-glass";
 import { teamMembers } from "../content";
 import { TeamGrid } from "./TeamGrid";
 import styles from "./Team.module.css";
@@ -17,9 +17,9 @@ export async function TeamPage() {
       </header>
       <TeamGrid members={teamMembers} />
       <div className={styles.actions}>
-        <LamaButton href="/contact" tint="var(--color-accent)">
+        <GlassButton href="/contact" tint="var(--color-accent)">
           {t("contact")}
-        </LamaButton>
+        </GlassButton>
       </div>
     </div>
   );

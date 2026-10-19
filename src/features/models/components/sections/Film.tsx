@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
-import { LamaIconButton } from "@/shared/ui/lama";
+import { GlassIconButton } from "@/shared/ui/liquid-glass";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { PinOnScroll } from "@/shared/ui/motion";
 import { mediaUrl } from "@/shared/lib/media";
@@ -55,7 +55,7 @@ export function Film({ section }: { section: FilmSection }) {
             {state === "loading" ? (
               <span className={styles.loading}>{t("loading")}</span>
             ) : (
-              <LamaIconButton icon="play" size="lg" label={t("playFilm")} onClick={toggle} />
+              <GlassIconButton icon="play" size="lg" label={t("playFilm")} onClick={toggle} />
             )}
           </div>
         )}

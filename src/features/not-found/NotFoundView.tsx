@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { LamaButton } from "@/shared/ui/lama";
+import { GlassButton } from "@/shared/ui/liquid-glass";
 import styles from "./NotFoundView.module.css";
 
 export async function NotFoundView() {
@@ -10,7 +10,7 @@ export async function NotFoundView() {
       <img src="/media/shared/error_pic.png" alt="" className={styles.picture} />
       <h1 className={styles.code}>{t("notFound.title")}</h1>
       <p className={styles.text}>{t("notFound.text")}</p>
-      <LamaButton href="/">{t("actions.backToHome")}</LamaButton>
+      <GlassButton href="/">{t("actions.backToHome")}</GlassButton>
     </section>
   );
 }

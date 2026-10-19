@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import { useLenis } from "@/shared/providers/SmoothScrollProvider";
-import { LamaIconButton } from "@/shared/ui/lama";
+import { GlassIconButton } from "@/shared/ui/liquid-glass";
 import styles from "./VideoLightbox.module.css";
 
 type Props = { src: string; poster?: string; onClose: () => void };
@@ -36,7 +36,7 @@ export function VideoLightbox({ src, poster, onClose }: Props) {
         onClick={(e) => e.stopPropagation()}
         onEnded={onClose}
       />
-      <LamaIconButton icon="close" label={t("close")} className={styles.close} onClick={onClose} />
+      <GlassIconButton icon="close" label={t("close")} className={styles.close} onClick={onClose} />
     </div>,
     document.body,
   );

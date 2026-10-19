@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
-import { LamaIconButton } from "@/shared/ui/lama";
+import { GlassIconButton } from "@/shared/ui/liquid-glass";
 import { Reveal } from "@/shared/ui/motion";
 import { useModelText } from "../../lib/model-context";
 import type { GallerySection } from "../../types";
@@ -97,7 +97,7 @@ export function Gallery({ section }: { section: GallerySection }) {
           <div className={styles.lightboxImage}>
             <Image src={lightbox} alt="" fill sizes="90vw" quality={85} />
           </div>
-          <LamaIconButton
+          <GlassIconButton
             icon="close"
             label={common("close")}
             className={styles.lightboxClose}

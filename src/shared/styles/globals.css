@@ -21,8 +21,8 @@
   --color-accent: #14795f;
   --color-accent-bright: #4fc9a4;
 
-  /* Pill shape for filled buttons and highlights outside a Lama surface. */
-  --cut-sm: inset(0 round 999px);
+  /* Square shape for filled buttons and highlights outside a glass surface. */
+  --cut-sm: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
   --color-black: var(--color-jet-black);
   --color-white: #fff;
@@ -80,13 +80,6 @@
     /* Full-screen artwork is drawn at 750×1448: size sections to it so phones show the whole image. */
     --mobile-media-height: min(100svh, calc(100vw * 1448 / 750));
   }
-}
-
-/* How much of a Lama edge is traced, animated on hover (see shared/ui/lama). */
-@property --lama-p {
-  syntax: "<percentage>";
-  inherits: true;
-  initial-value: 0%;
 }
 
 html {

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Link } from "@/i18n/navigation";
-import { lama, LamaButton } from "@/shared/ui/lama";
+import { glass, GlassButton } from "@/shared/ui/liquid-glass";
 import { OPEN_SETTINGS_EVENT, saveConsent, useCookieConsent } from "../lib/consent";
 import styles from "./CookieConsent.module.css";
 
@@ -40,7 +40,7 @@ export function CookieConsent() {
   return (
     <>
       {!settingsOpen && (
-        <section className={clsx(lama.surface, styles.banner)} aria-label={t("bannerTitle")}>
+        <section className={clsx(glass.surface, styles.banner)} aria-label={t("bannerTitle")}>
           <div className={styles.text}>
             <h2 className={styles.title}>{t("bannerTitle")}</h2>
             <p>
@@ -48,12 +48,12 @@ export function CookieConsent() {
             </p>
           </div>
           <div className={styles.actions}>
-            <LamaButton size="sm" onClick={() => decide(all)} tint="var(--color-accent)">
+            <GlassButton size="sm" onClick={() => decide(all)} tint="var(--color-accent)">
               {t("acceptAll")}
-            </LamaButton>
-            <LamaButton size="sm" onClick={() => decide(none)}>
+            </GlassButton>
+            <GlassButton size="sm" onClick={() => decide(none)}>
               {t("rejectAll")}
-            </LamaButton>
+            </GlassButton>
             <button type="button" className={styles.textButton} onClick={() => setSettingsOpen(true)}>
               {t("settings")}
             </button>
@@ -63,7 +63,7 @@ export function CookieConsent() {
 
       {settingsOpen && (
         <div className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="cookie-center-title">
-          <div className={clsx(lama.surface, styles.dialog)} data-lenis-prevent>
+          <div className={clsx(glass.surface, styles.dialog)} data-lenis-prevent>
             <button
               type="button"
               className={styles.close}
@@ -117,15 +117,15 @@ export function CookieConsent() {
             </label>
 
             <div className={styles.actions}>
-              <LamaButton size="sm" onClick={() => decide({ analytics, marketing })} tint="var(--color-accent)">
+              <GlassButton size="sm" onClick={() => decide({ analytics, marketing })} tint="var(--color-accent)">
                 {t("save")}
-              </LamaButton>
-              <LamaButton size="sm" onClick={() => decide(all)}>
+              </GlassButton>
+              <GlassButton size="sm" onClick={() => decide(all)}>
                 {t("acceptAll")}
-              </LamaButton>
-              <LamaButton size="sm" onClick={() => decide(none)}>
+              </GlassButton>
+              <GlassButton size="sm" onClick={() => decide(none)}>
                 {t("rejectAll")}
-              </LamaButton>
+              </GlassButton>
             </div>
           </div>
         </div>

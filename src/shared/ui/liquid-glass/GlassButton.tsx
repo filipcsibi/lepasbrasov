@@ -2,15 +2,15 @@ import type { CSSProperties, ReactNode } from "react";
 import clsx from "clsx";
 import { Link } from "@/i18n/navigation";
 import type { NavHref } from "@/config/navigation";
-import lama from "./lama.module.css";
-import styles from "./LamaButton.module.css";
+import glass from "./glass.module.css";
+import styles from "./GlassButton.module.css";
 
 type CommonProps = {
   children: ReactNode;
   className?: string;
-  /** Optional solid colour of the button, e.g. the section's brand colour. */
+  /** Optional colour tint behind the glass, e.g. the section's brand colour. */
   tint?: string;
-  /** Colour of the accent rule, without filling the button. */
+  /** Same as `tint`: a brand colour behind the glass (kept for call sites that pass an accent). */
   accent?: string;
   size?: "md" | "sm";
 };
@@ -23,44 +23,20 @@ type ActionProps = CommonProps & {
   ariaPressed?: boolean;
 };
 
-export type LamaButtonProps = InternalLinkProps | ExternalLinkProps | ActionProps;
+export type GlassButtonProps = InternalLinkProps | ExternalLinkProps | ActionProps;
 
 /**
  * The site-wide call-to-action button ("DESCOPERĂ MAI MULT", "CITEȘTE", …).
- * Lama plate: the outline lights up from left to right on hover.
+ * Square liquid glass plate with the LEPAS rainbow rim on hover.
  */
-export function LamaButton(props: LamaButtonProps) {
-  const { children, className, tint, accent, size = "md" } = props;
-  const classes = clsx(
-    lama.surface,
-    lama.interactive,
-    styles.button,
-    styles[size],
-    (tint || accent) && styles.solid,
-    className,
-  );
-  const style = accent
-    ? ({ "--lama-base": accent, "--lama-accent": accent } as CSSProperties)
-    : tint
-      ? ({ "--lama-base": tint, "--lama-accent": tint } as CSSProperties)
-      : undefined;
-  const label = (
-    <>
-      <span className={styles.label}>{children}</span>
-      <span className={styles.chip} aria-hidden="true">
-        <svg
-          viewBox="0 0 16 16"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M3 8h10M9 4l4 4-4 4" />
-        </svg>
-      </span>
-    </>
-  );
+export function GlassButton(props: GlassButtonProps) {
+  const { children, className, accent, size = "md" } = props;
+  const tint = props.tint ?? accent;
+  const classes = clsx(glass.surface, glass.interactive, styles.button, styles[size], className);
+  const style = tint
+    ? ({ "--glass-tint": `color-mix(in srgb, ${tint} 55%, transparent)` } as CSSProperties)
+    : undefined;
+  const label = <span className={styles.label}>{children}</span>;
 
   if ("href" in props) {
     return (

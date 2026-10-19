@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { lama } from "@/shared/ui/lama";
+import { glass } from "@/shared/ui/liquid-glass";
 import type { TeamMember } from "../content";
 import styles from "./Team.module.css";
 
@@ -12,7 +12,7 @@ export function TeamGrid({ members }: { members: TeamMember[] }) {
   return (
     <ul className={styles.grid}>
       {members.map((member) => (
-        <li key={member.id} className={clsx(lama.surface, styles.card)}>
+        <li key={member.id} className={clsx(glass.surface, styles.card)}>
           {member.photo && (
             <div className={styles.photo}>
               <Image src={member.photo} alt={member.name} fill sizes="(max-width: 767px) 45vw, 22vw" />

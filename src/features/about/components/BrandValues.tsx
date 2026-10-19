@@ -6,7 +6,7 @@ import { gsap, useGSAP } from "@/shared/lib/gsap";
 import { useIsMobile } from "@/shared/hooks/useMediaQuery";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { mediaUrl } from "@/shared/lib/media";
-import { LamaIconButton } from "@/shared/ui/lama";
+import { GlassIconButton } from "@/shared/ui/liquid-glass";
 import { VideoLightbox } from "@/shared/ui/video-lightbox";
 import { brandValuesContent as content } from "../content";
 import styles from "./BrandValues.module.css";
@@ -23,7 +23,7 @@ export function BrandValues() {
         {isMobile ? (
           <>
             <ResponsiveImage src={content.banner.mobileImage} className={styles.cover} priority />
-            <LamaIconButton
+            <GlassIconButton
               icon="play"
               size="lg"
               label={tc("play")}

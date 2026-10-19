@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css/effect-fade";
 import type { Swiper as SwiperType } from "swiper";
-import { LamaButton } from "@/shared/ui/lama";
+import { GlassButton } from "@/shared/ui/liquid-glass";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { SliderDots } from "@/shared/ui/slider-dots";
 import { useIsMobile } from "@/shared/hooks/useMediaQuery";
@@ -61,7 +61,7 @@ export function ModelHero({ section }: { section: HeroSection }) {
           <p className={styles.subtitle}>{t(section.subtitleKey)}</p>
           <div className={styles.introActions}>
             <VariantSwitch />
-            {section.action && <LamaButton href={section.action.href}>{t(section.action.labelKey)}</LamaButton>}
+            {section.action && <GlassButton href={section.action.href}>{t(section.action.labelKey)}</GlassButton>}
           </div>
         </div>
       ) : (

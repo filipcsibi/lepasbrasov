@@ -11,8 +11,8 @@ What sets it apart:
   (`src/features/advisor`).
 - **LEPAS L6 PHEV and LEPAS L6 BEV are separate pages**, each with its own colour, figures and call-to-action, linked
   by a PHEV | BEV switch.
-- **Lamă** — the UI material: flat borderless graphite plates with soft corners and pill buttons that end in an arrow chip
-  (white by default, solid accent for the main action) (`src/shared/ui/lama`).
+- **Liquid glass, square** — the UI material: frosted glass plates and buttons with square corners, a specular rim and a
+  rainbow rim on hover (`src/shared/ui/liquid-glass`). The showroom's street signs the home page.
 
 ```bash
 npm install
@@ -107,7 +107,7 @@ production; without one the form shows an error instead of silently losing the l
 | `CRM_API_SECRET_LEPAS`  | SalesPartner API secret (sent as `X-API-Secret`)                                 |
 | `RESEND_API_KEY`        | E-mail delivery (added by the Resend integration from the Vercel Marketplace)    |
 | `LEAD_EMAIL_TO`         | Who receives the leads (comma-separated for several addresses)                   |
-| `LEAD_EMAIL_FROM`       | Verified sender, e.g. `LEPAS Brașov <leads@lepasbrasov.ro>`                    |
+| `LEAD_EMAIL_FROM`       | Verified sender, e.g. `LEPAS Brașov <leads@lepasbrasov.ro>`                      |
 | `LEAD_WEBHOOK_URL`      | Optional: also POST every lead as JSON to Google Sheets / Zapier / Make          |
 
 These are read only on the server (none starts with `NEXT_PUBLIC_`), so they never reach the browser.
@@ -153,7 +153,7 @@ src/
       lib/                feature logic (e.g. lead delivery)
       index.ts            public API — import features only through this
   shared/
-    ui/lama/            Lamă surface, LamaButton, LamaIconButton, LamaTabs
+    ui/liquid-glass/    glass surface, GlassButton, GlassIconButton, GlassTabs
     ui/media/             ResponsiveImage (art-directed next/image), ResponsiveVideo
     ui/motion/            PinOnScroll (GSAP ScrollTrigger), Reveal (plain wrapper: text is not animated in)
     ui/slider-dots/ ui/markdown/ ui/scroll-to-top/
@@ -170,12 +170,11 @@ public/media/             images & videos, grouped per feature
 **Sizing:** as on the original site, `1rem` = 100px on a 1920px-wide screen (and on a 750px mobile design), so values
 can be copied straight from the design files (48px → `0.48rem`).
 
-**Lama:** `lama.surface` (from `@/shared/ui/lama`) gives any element the site's material — a flat graphite
-plate with the top-right and bottom-left corners cut and marked in the route colour; on `lama.interactive` elements
-the route line is traced around the whole edge on hover and keyboard focus (pure CSS, same on touch screens). Tune per
-element with `--lama-accent`, `--lama-tint`, `--lama-base`, `--lama-blur` and `--lama-cut` (`--lama-cut-tr`
-/ `--lama-cut-bl` for one corner, `0px` = square). Filled buttons outside a surface use `clip-path: var(--cut-sm)`.
-The site accent is `--color-accent` (Freedom Blue) in `globals.css`; model pages set their own (`accent` in the model's
+**Glass:** `glass.surface` (from `@/shared/ui/liquid-glass`) gives any element the site's material — frosted glass with
+square corners and a specular rim; `glass.interactive` elements get a rainbow rim on hover. Tune per element with
+`--glass-tint`, `--glass-blur` and `--glass-radius` (square by default). Filled buttons outside a surface use
+`clip-path: var(--cut-sm)`.
+The site accent is `--color-accent` (deep emerald) in `globals.css`; model pages set their own (`accent` in the model's
 data file): orange for PHEV, green for BEV.
 
 **Before going live:** add the dealer's social

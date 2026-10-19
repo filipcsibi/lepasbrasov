@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { useRef, useState, type CSSProperties } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
-import { LamaIconButton } from "@/shared/ui/lama";
+import { GlassIconButton } from "@/shared/ui/liquid-glass";
 import { Reveal } from "@/shared/ui/motion";
 import { SliderDots } from "@/shared/ui/slider-dots";
 import { useModelText } from "../../lib/model-context";
@@ -27,8 +27,8 @@ export function CardCarousel({ section }: { section: CardCarouselSection }) {
           {t(section.titleKey)}
         </Reveal>
         <div className={styles.nav}>
-          <LamaIconButton icon="prev" label={common("previous")} onClick={() => swiperRef.current?.slidePrev()} />
-          <LamaIconButton icon="next" label={common("next")} onClick={() => swiperRef.current?.slideNext()} />
+          <GlassIconButton icon="prev" label={common("previous")} onClick={() => swiperRef.current?.slidePrev()} />
+          <GlassIconButton icon="next" label={common("next")} onClick={() => swiperRef.current?.slideNext()} />
         </div>
       </div>
 

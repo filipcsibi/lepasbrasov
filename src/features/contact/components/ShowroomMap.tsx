@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { useState } from "react";
-import { lama, LamaButton } from "@/shared/ui/lama";
+import { glass, GlassButton } from "@/shared/ui/liquid-glass";
 import styles from "./ContactPage.module.css";
 
 type Props = { query: string; title: string; loadLabel: string; note: string; address: string };
@@ -15,7 +15,7 @@ export function ShowroomMap({ query, title, loadLabel, note, address }: Props) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={clsx(lama.surface, styles.map)}>
+    <div className={clsx(glass.surface, styles.map)}>
       {loaded ? (
         <iframe
           title={title}
@@ -37,7 +37,7 @@ export function ShowroomMap({ query, title, loadLabel, note, address }: Props) {
             <circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" strokeWidth="1.4" />
           </svg>
           <p className={styles.mapAddress}>{address}</p>
-          <LamaButton onClick={() => setLoaded(true)}>{loadLabel}</LamaButton>
+          <GlassButton onClick={() => setLoaded(true)}>{loadLabel}</GlassButton>
           <p className={styles.mapNote}>{note}</p>
         </div>
       )}

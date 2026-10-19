@@ -30,9 +30,8 @@
 }
 
 .panel {
-  --lama-radius: 0 0.3rem 0.3rem 0;
-  --lama-tint: rgba(10, 10, 10, 0.3);
-  --lama-blur: 22px;
+  --glass-tint: rgba(10, 10, 10, 0.3);
+  --glass-blur: 22px;
   position: relative;
   z-index: 2;
   width: var(--panel-width);
@@ -191,7 +190,6 @@
 
 @media (max-width: 767px) {
   .panel {
-    --lama-radius: 0;
     width: 100%;
   }
 

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { siteConfig } from "@/config/site";
-import { lama } from "@/shared/ui/lama";
+import { glass } from "@/shared/ui/liquid-glass";
 import { useLenis } from "@/shared/providers/SmoothScrollProvider";
 import { BurgerIcon, HomeIcon, PhoneIcon } from "./icons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -52,7 +52,7 @@ export function Header() {
         // The home hero already carries the "LEPAS Brașov" signature: no second logo above it.
         data-hero-signature={(pathname === "/" && !compact) || undefined}
       >
-        <div className={clsx(lama.surface, styles.bar)} aria-hidden="true" />
+        <div className={clsx(glass.surface, styles.bar)} aria-hidden="true" />
 
         <div className={styles.left}>
           <Link href="/" className={styles.home} aria-label={t("home")}>
@@ -60,7 +60,7 @@ export function Header() {
           </Link>
           <button
             type="button"
-            className={clsx(lama.surface, lama.interactive, styles.menuButton)}
+            className={clsx(glass.surface, glass.interactive, styles.menuButton)}
             aria-expanded={open}
             aria-controls="site-menu"
             onClick={() => setOpen((v) => !v)}
@@ -76,7 +76,7 @@ export function Header() {
         </Link>
 
         <div className={styles.right}>
-          <Link href="/contact" className={clsx(lama.surface, lama.interactive, styles.contact)}>
+          <Link href="/contact" className={clsx(glass.surface, glass.interactive, styles.contact)}>
             <PhoneIcon />
             <span className={styles.contactLabel}>{t("groups.contact")}</span>
           </Link>

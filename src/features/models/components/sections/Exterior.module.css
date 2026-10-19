@@ -131,9 +131,8 @@
 
 /* Detail panel */
 .panel {
-  --lama-radius: 0.1rem;
-  --lama-tint: rgba(5, 3, 5, 0.6);
-  --lama-blur: 24px;
+  --glass-tint: rgba(5, 3, 5, 0.6);
+  --glass-blur: 24px;
   position: absolute !important;
   top: 0;
   right: 0;

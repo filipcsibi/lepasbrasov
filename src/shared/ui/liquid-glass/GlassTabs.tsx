@@ -2,8 +2,8 @@
 
 import clsx from "clsx";
 import type { CSSProperties } from "react";
-import lama from "./lama.module.css";
-import styles from "./LamaTabs.module.css";
+import glass from "./glass.module.css";
+import styles from "./GlassTabs.module.css";
 
 type Props<T extends string> = {
   options: { value: T; label: string }[];
@@ -13,14 +13,14 @@ type Props<T extends string> = {
   className?: string;
 };
 
-/** Lama segmented control with a sliding highlight. */
-export function LamaTabs<T extends string>({ options, value, onChange, label, className }: Props<T>) {
+/** Liquid-glass segmented control with a sliding highlight. */
+export function GlassTabs<T extends string>({ options, value, onChange, label, className }: Props<T>) {
   const index = options.findIndex((o) => o.value === value);
   return (
     <div
       role="tablist"
       aria-label={label}
-      className={clsx(lama.surface, styles.tabs, className)}
+      className={clsx(glass.surface, styles.tabs, className)}
       style={{ "--count": options.length, "--index": index } as CSSProperties}
     >
       <span className={styles.thumb} aria-hidden="true" />

@@ -1,7 +1,6 @@
 .banner {
-  --lama-radius: 0.19rem;
-  --lama-tint: rgba(20, 20, 20, 0.55);
-  --lama-blur: 20px;
+  --glass-tint: rgba(20, 20, 20, 0.55);
+  --glass-blur: 20px;
   position: fixed !important;
   left: 50%;
   bottom: 0.3rem;
@@ -75,9 +74,8 @@
 }
 
 .dialog {
-  --lama-radius: 0.19rem;
-  --lama-tint: rgba(20, 20, 20, 0.7);
-  --lama-blur: 24px;
+  --glass-tint: rgba(20, 20, 20, 0.7);
+  --glass-blur: 24px;
   width: min(8rem, 100%);
   max-height: 90vh;
   overflow: auto;

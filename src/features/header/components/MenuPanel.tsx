@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState, type CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { navigation } from "@/config/navigation";
-import { lama, LamaButton } from "@/shared/ui/lama";
+import { glass, GlassButton } from "@/shared/ui/liquid-glass";
 import { useIsMobile } from "@/shared/hooks/useMediaQuery";
 import { ArrowLeftIcon } from "./icons";
 import styles from "./MenuPanel.module.css";
@@ -50,7 +50,7 @@ export function MenuPanel({ open, onClose }: Props) {
     >
       <div className={styles.backdrop} onClick={onClose} />
 
-      <nav className={clsx(lama.surface, styles.panel)} aria-label={t("nav.menu")}>
+      <nav className={clsx(glass.surface, styles.panel)} aria-label={t("nav.menu")}>
         {/* Model imagery behind the list (desktop). */}
         {showModels &&
           models.map((m, i) => (
@@ -149,9 +149,9 @@ export function MenuPanel({ open, onClose }: Props) {
           <div key={m.model!.id} className={clsx(styles.previewItem, i === modelIndex && styles.visible)}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={m.model!.previewImage} alt="" />
-            <LamaButton href={m.href} className={styles.previewCta}>
+            <GlassButton href={m.href} className={styles.previewCta}>
               {t("actions.discoverMore")}
-            </LamaButton>
+            </GlassButton>
           </div>
         ))}
         {activeModel && <span className="sr-only">{t(`nav.links.${activeModel.labelKey}` as "nav.links.legal")}</span>}

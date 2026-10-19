@@ -1,6 +1,6 @@
 .tabs {
+  --glass-tint: rgba(255, 255, 255, 0.05);
   --pad: 0.06rem;
-  --lama-radius: 999px;
   display: inline-grid;
   grid-template-columns: repeat(var(--count), minmax(0, 1fr));
   width: min(8rem, 100%);
@@ -14,10 +14,13 @@
   bottom: var(--pad);
   left: var(--pad);
   width: calc((100% - var(--pad) * 2) / var(--count));
-  background: var(--lama-accent, var(--color-accent));
   border-radius: 999px;
+  background: linear-gradient(135deg, rgba(235, 146, 1, 0.55), rgba(235, 146, 1, 0.25));
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.55),
+    0 4px 14px rgba(235, 146, 1, 0.25);
   transform: translateX(calc(var(--index) * 100%));
-  transition: transform 0.45s var(--ease-out-expo);
+  transition: transform 0.55s var(--ease-bounce);
 }
 
 .tab {
@@ -28,14 +31,9 @@
   transition: color 0.3s ease;
 }
 
-.tab:hover {
+.tab:hover,
+.active {
   color: var(--color-white);
-}
-
-.active,
-.active:hover {
-  color: #0d0d10;
-  font-weight: 600;
 }
 
 @media (max-width: 767px) {

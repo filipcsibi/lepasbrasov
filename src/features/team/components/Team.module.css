@@ -53,9 +53,8 @@
 }
 
 .card {
-  --lama-radius: 0.16rem;
-  --lama-base: rgba(22, 23, 29, 0.9);
-  --lama-tint: rgba(255, 255, 255, 0.05);
+  --glass-tint: rgba(22, 23, 29, 0.9);
+  --glass-tint: rgba(255, 255, 255, 0.05);
   overflow: hidden;
   color: var(--color-white);
 }
@@ -131,7 +130,6 @@
   }
 
   .card {
-    --lama-radius: 0.22rem;
   }
 
   .body {

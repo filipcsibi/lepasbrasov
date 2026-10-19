@@ -1,8 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import lama from "./lama.module.css";
-import styles from "./LamaIconButton.module.css";
+import glass from "./glass.module.css";
+import styles from "./GlassIconButton.module.css";
 
 type Props = {
   icon: "prev" | "next" | "close" | "play" | "pause";
@@ -21,15 +21,15 @@ const paths: Record<Props["icon"], string> = {
   pause: "M8.5 5.5v13M15.5 5.5v13",
 };
 
-/** Square Lama button for carousel arrows, close and play controls. */
-export function LamaIconButton({ icon, label, onClick, className, size = "md", disabled }: Props) {
+/** Round liquid-glass button for carousel arrows, close and play controls. */
+export function GlassIconButton({ icon, label, onClick, className, size = "md", disabled }: Props) {
   return (
     <button
       type="button"
       aria-label={label}
       disabled={disabled}
       onClick={onClick}
-      className={clsx(lama.surface, lama.interactive, styles.button, styles[size], className)}
+      className={clsx(glass.surface, glass.interactive, styles.button, styles[size], className)}
     >
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path

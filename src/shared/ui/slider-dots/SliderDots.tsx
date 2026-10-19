@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { forwardRef } from "react";
-import { lama } from "@/shared/ui/lama";
+import { glass } from "@/shared/ui/liquid-glass";
 import styles from "./SliderDots.module.css";
 
 type Props = {
@@ -25,7 +25,7 @@ export const SliderDots = forwardRef<HTMLDivElement, Props>(function SliderDots(
   ref,
 ) {
   return (
-    <div ref={ref} className={clsx(lama.surface, styles.dots, styles[variant], className)}>
+    <div ref={ref} className={clsx(glass.surface, styles.dots, styles[variant], className)}>
       {Array.from({ length: count }, (_, i) => (
         <button
           key={i}

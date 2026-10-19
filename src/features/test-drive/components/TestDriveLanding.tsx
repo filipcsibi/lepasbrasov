@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { siteConfig } from "@/config/site";
 import { Link } from "@/i18n/navigation";
-import { lama } from "@/shared/ui/lama";
+import { glass } from "@/shared/ui/liquid-glass";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { Reveal } from "@/shared/ui/motion";
 import type { TestDriveLanding as Landing } from "../config";
@@ -62,7 +62,7 @@ export function TestDriveLanding({ landing, showModelSelect }: Props) {
               <span>{t("header.call")}</span> {showroom.phone}
             </a>
           )}
-          <FormLink className={clsx(lama.surface, lama.interactive, styles.headerCta)}>
+          <FormLink className={clsx(glass.surface, glass.interactive, styles.headerCta)}>
             <span>{cta}</span>
           </FormLink>
         </div>
