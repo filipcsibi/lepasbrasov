@@ -4,7 +4,7 @@ import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { legalLinks, navigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import styles from "./Footer.module.css";
 
 export async function Footer() {
@@ -26,7 +26,7 @@ export async function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.id}
-                className={clsx(creasta.surface, creasta.interactive, styles.socialIcon)}
+                className={clsx(lama.surface, lama.interactive, styles.socialIcon)}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={s.icon} alt="" />

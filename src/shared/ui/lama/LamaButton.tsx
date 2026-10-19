@@ -2,15 +2,15 @@ import type { CSSProperties, ReactNode } from "react";
 import clsx from "clsx";
 import { Link } from "@/i18n/navigation";
 import type { NavHref } from "@/config/navigation";
-import creasta from "./creasta.module.css";
-import styles from "./CreastaButton.module.css";
+import lama from "./lama.module.css";
+import styles from "./LamaButton.module.css";
 
 type CommonProps = {
   children: ReactNode;
   className?: string;
-  /** Optional colour of the button's wash and lit ridge, e.g. the section's brand colour. */
+  /** Optional colour of the button's wash and accent rule, e.g. the section's brand colour. */
   tint?: string;
-  /** Colour of the lit ridge, without filling the button. */
+  /** Colour of the accent rule, without filling the button. */
   accent?: string;
   size?: "md" | "sm";
 };
@@ -23,19 +23,19 @@ type ActionProps = CommonProps & {
   ariaPressed?: boolean;
 };
 
-export type CreastaButtonProps = InternalLinkProps | ExternalLinkProps | ActionProps;
+export type LamaButtonProps = InternalLinkProps | ExternalLinkProps | ActionProps;
 
 /**
  * The site-wide call-to-action button ("DESCOPERĂ MAI MULT", "CITEȘTE", …).
- * Creasta plate: the outline lights up from left to right on hover.
+ * Lama plate: the outline lights up from left to right on hover.
  */
-export function CreastaButton(props: CreastaButtonProps) {
+export function LamaButton(props: LamaButtonProps) {
   const { children, className, tint, accent, size = "md" } = props;
-  const classes = clsx(creasta.surface, creasta.interactive, styles.button, styles[size], className);
+  const classes = clsx(lama.surface, lama.interactive, styles.button, styles[size], className);
   const style = accent
-    ? ({ "--creasta-accent": accent } as CSSProperties)
+    ? ({ "--lama-accent": accent } as CSSProperties)
     : tint
-      ? ({ "--creasta-tint": `color-mix(in srgb, ${tint} 42%, transparent)`, "--creasta-accent": tint } as CSSProperties)
+      ? ({ "--lama-tint": `color-mix(in srgb, ${tint} 42%, transparent)`, "--lama-accent": tint } as CSSProperties)
       : undefined;
   const label = <span className={styles.label}>{children}</span>;
 

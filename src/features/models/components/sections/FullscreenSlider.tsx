@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { Swiper as SwiperType } from "swiper";
-import { CreastaIconButton } from "@/shared/ui/creasta";
+import { LamaIconButton } from "@/shared/ui/lama";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { PinOnScroll } from "@/shared/ui/motion";
 import { SliderDots } from "@/shared/ui/slider-dots";
@@ -72,7 +72,7 @@ export function FullscreenSlider({ section }: { section: FullscreenSliderSection
                   <ResponsiveImage src={slide.image.src} mobileSrc={slide.image.mobileSrc} className={styles.media} />
                   {/* Phones: video on demand instead of autoplaying. */}
                   {slide.video && (
-                    <CreastaIconButton
+                    <LamaIconButton
                       icon="play"
                       size="lg"
                       label={common("play")}
@@ -94,14 +94,14 @@ export function FullscreenSlider({ section }: { section: FullscreenSliderSection
 
         {section.slides.length > 1 && (
           <>
-            <CreastaIconButton
+            <LamaIconButton
               icon="prev"
               label={common("previous")}
               className={clsx(styles.arrow, styles.prev)}
               disabled={active === 0}
               onClick={() => swiperRef.current?.slidePrev()}
             />
-            <CreastaIconButton
+            <LamaIconButton
               icon="next"
               label={common("next")}
               className={clsx(styles.arrow, styles.next)}

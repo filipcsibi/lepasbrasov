@@ -196,7 +196,7 @@ export type ModelDefinition = {
   messagesKey: "lepasL8" | "lepasL6Phev" | "lepasL6Bev" | "lepasL4";
   /** Page background colour. */
   background: string;
-  /** Colour of the page's highlights and Creasta light (default: Panther Orange). */
+  /** Colour of the page's highlights and Lama light (default: Panther Orange). */
   accent?: string;
   /** Set on models sold with several drivetrains: shows the switch between their pages. */
   variant?: ModelVariant;

@@ -21,8 +21,8 @@
 
 /* Floating bar — hidden at the top, revealed once compact. */
 .bar {
-  --creasta-cut: 0.2rem;
-  --creasta-tint: rgba(18, 18, 20, 0.42);
+  --lama-cut: 0.2rem;
+  --lama-tint: rgba(18, 18, 20, 0.42);
   position: absolute !important;
   inset: 0.1rem calc(var(--page-gutter) - 0.24rem);
   opacity: 0;
@@ -174,7 +174,7 @@
   }
 
   .bar {
-    --creasta-cut: 0.24rem;
+    --lama-cut: 0.24rem;
     inset: 0.14rem 0.14rem;
   }
 

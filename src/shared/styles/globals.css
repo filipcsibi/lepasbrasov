@@ -17,12 +17,12 @@
   --color-slate-gray: #969392;
   --color-jet-black: #000;
 
-  /* LEPAS Brașov: the ridge colour — links, highlights, calls to action and the Creasta ridge. */
+  /* LEPAS Brașov: the accent colour — links, highlights, calls to action and the Lama rule. */
   --color-accent: var(--color-freedom-blue);
   --color-accent-bright: #6aa3ee;
 
-  /* Peak-topped shape for filled buttons and highlights outside a Creasta surface. */
-  --cut-sm: polygon(0 0.06rem, 58% 0.06rem, 70% 0, 82% 0.06rem, 100% 0.06rem, 100% 100%, 0 100%);
+  /* Square shape for filled buttons and highlights outside a Lama surface. */
+  --cut-sm: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 
   --color-black: var(--color-jet-black);
   --color-white: #fff;
@@ -82,8 +82,8 @@
   }
 }
 
-/* How much of a Creasta edge is traced, animated on hover (see shared/ui/creasta). */
-@property --creasta-p {
+/* How much of a Lama edge is traced, animated on hover (see shared/ui/lama). */
+@property --lama-p {
   syntax: "<percentage>";
   inherits: true;
   initial-value: 0%;

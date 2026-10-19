@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { CreastaButton } from "@/shared/ui/creasta";
+import { LamaButton } from "@/shared/ui/lama";
 import { teamMembers } from "../content";
 import { TeamGrid } from "./TeamGrid";
 import styles from "./Team.module.css";
@@ -17,9 +17,9 @@ export async function TeamPage() {
       </header>
       <TeamGrid members={teamMembers} />
       <div className={styles.actions}>
-        <CreastaButton href="/contact" tint="var(--color-accent)">
+        <LamaButton href="/contact" tint="var(--color-accent)">
           {t("contact")}
-        </CreastaButton>
+        </LamaButton>
       </div>
     </div>
   );

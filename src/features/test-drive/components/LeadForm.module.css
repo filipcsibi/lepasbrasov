@@ -1,7 +1,7 @@
 .form {
-  --creasta-cut: 0.28rem;
-  --creasta-tint: rgba(12, 14, 20, 0.62);
-  --creasta-blur: 22px;
+  --lama-cut: 0.28rem;
+  --lama-tint: rgba(12, 14, 20, 0.62);
+  --lama-blur: 22px;
   display: flex;
   flex-direction: column;
   gap: 0.16rem;
@@ -239,7 +239,7 @@
   .form {
     gap: 0.28rem;
     padding: 0.5rem 0.36rem 0.44rem;
-    --creasta-cut: 0.4rem;
+    --lama-cut: 0.4rem;
   }
 
   .title {

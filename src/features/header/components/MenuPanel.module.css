@@ -30,10 +30,10 @@
 }
 
 .panel {
-  --creasta-cut-tr: 0.4rem;
-  --creasta-cut-bl: 0px;
-  --creasta-tint: rgba(10, 10, 10, 0.3);
-  --creasta-blur: 22px;
+  --lama-cut-tr: 0.4rem;
+  --lama-cut-bl: 0px;
+  --lama-tint: rgba(10, 10, 10, 0.3);
+  --lama-blur: 22px;
   position: relative;
   z-index: 2;
   width: var(--panel-width);
@@ -192,7 +192,7 @@
 
 @media (max-width: 767px) {
   .panel {
-    --creasta-cut-tr: 0px;
+    --lama-cut-tr: 0px;
     width: 100%;
   }
 

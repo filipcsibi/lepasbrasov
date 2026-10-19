@@ -42,8 +42,8 @@
 }
 
 .card {
-  --creasta-cut: 0.24rem;
-  --creasta-base: rgba(20, 21, 27, 0.9);
+  --lama-cut: 0.24rem;
+  --lama-base: rgba(20, 21, 27, 0.9);
   padding: 0.44rem;
 }
 
@@ -257,7 +257,7 @@
   }
 
   .card {
-    --creasta-cut: 0.32rem;
+    --lama-cut: 0.32rem;
     padding: 0.4rem 0.34rem;
   }
 

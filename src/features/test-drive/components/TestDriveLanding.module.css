@@ -44,7 +44,7 @@
 }
 
 .headerCta {
-  --creasta-tint: rgba(255, 255, 255, 0.1);
+  --lama-tint: rgba(255, 255, 255, 0.1);
   display: inline-flex;
   align-items: center;
   height: 0.48rem;

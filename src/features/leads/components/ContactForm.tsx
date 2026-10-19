@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { startTransition, useActionState, useEffect, useState, type FormEvent } from "react";
 import { Link } from "@/i18n/navigation";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import { submitContactRequest, type LeadFormState } from "../actions";
 import { leadModels } from "../config";
 import { readAttribution } from "../lib/attribution";
@@ -42,7 +42,7 @@ export function ContactForm() {
 
   if (state.status === "success") {
     return (
-      <div className={clsx(creasta.surface, styles.form, styles.done)} role="status">
+      <div className={clsx(lama.surface, styles.form, styles.done)} role="status">
         <h2 className={styles.title}>{t("successTitle")}</h2>
         <p className={styles.subtitle}>{t("successText")}</p>
       </div>
@@ -50,7 +50,7 @@ export function ContactForm() {
   }
 
   return (
-    <form action={action} onSubmit={onSubmit} className={clsx(creasta.surface, styles.form)} noValidate>
+    <form action={action} onSubmit={onSubmit} className={clsx(lama.surface, styles.form)} noValidate>
       <h2 className={styles.title}>{t("title")}</h2>
       <p className={styles.subtitle}>{t("subtitle")}</p>
 

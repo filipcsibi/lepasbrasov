@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { useState, type CSSProperties } from "react";
-import { creasta, CreastaButton, CreastaTabs } from "@/shared/ui/creasta";
+import { lama, LamaButton, LamaTabs } from "@/shared/ui/lama";
 import { Reveal } from "@/shared/ui/motion";
 import { advisorInputs as inputs, consumption } from "../config";
 import { calculate, type Variant } from "../lib/calculate";
@@ -72,7 +72,7 @@ export function Advisor({ current }: Props) {
   );
 
   return (
-    <section className={styles.section} style={{ "--accent": accent, "--creasta-accent": accent } as CSSProperties}>
+    <section className={styles.section} style={{ "--accent": accent, "--lama-accent": accent } as CSSProperties}>
       <header className={styles.header}>
         <Reveal as="p" className={styles.eyebrow}>
           {t("eyebrow")}
@@ -86,7 +86,7 @@ export function Advisor({ current }: Props) {
       </header>
 
       <div className={styles.grid}>
-        <div className={clsx(creasta.surface, styles.card, styles.inputs)}>
+        <div className={clsx(lama.surface, styles.card, styles.inputs)}>
           {slider("daily", t("inputs.dailyKm"), `${dailyKm} km`, inputs.dailyKm, dailyKm, setDailyKm)}
           {slider(
             "trips",
@@ -100,7 +100,7 @@ export function Advisor({ current }: Props) {
             <span className={styles.fieldHead}>
               <span>{t("inputs.homeCharging")}</span>
             </span>
-            <CreastaTabs
+            <LamaTabs
               label={t("inputs.homeCharging")}
               className={styles.toggle}
               value={homeCharging ? "yes" : "no"}
@@ -122,7 +122,7 @@ export function Advisor({ current }: Props) {
           {slider("fuel", t("inputs.fuel"), `${price.format(fuelPrice)} lei/l`, inputs.fuel, fuelPrice, setFuelPrice)}
         </div>
 
-        <div className={clsx(creasta.surface, styles.card, styles.result)} aria-live="polite">
+        <div className={clsx(lama.surface, styles.card, styles.result)} aria-live="polite">
           <p className={styles.resultLabel}>{t("result.label")}</p>
           <p className={styles.resultName}>
             LEPAS L6 <strong>{result.recommended.toUpperCase()}</strong>
@@ -159,14 +159,14 @@ export function Advisor({ current }: Props) {
 
           <div className={styles.actions}>
             {result.recommended !== current && (
-              <CreastaButton
+              <LamaButton
                 href={{ pathname: "/models/[slug]", params: { slug: modelSlug[result.recommended] } }}
                 tint={accent}
               >
                 {t("result.discover", { variant: result.recommended.toUpperCase() })}
-              </CreastaButton>
+              </LamaButton>
             )}
-            <CreastaButton href="/test-drive">{t("result.offer")}</CreastaButton>
+            <LamaButton href="/test-drive">{t("result.offer")}</LamaButton>
           </div>
         </div>
       </div>

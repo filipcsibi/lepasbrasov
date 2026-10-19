@@ -11,8 +11,8 @@ What sets it apart:
   (`src/features/advisor`).
 - **LEPAS L6 PHEV and LEPAS L6 BEV are separate pages**, each with its own colour, figures and call-to-action, linked
   by a PHEV | BEV switch.
-- **Creastă** — the UI material: flat graphite plates whose top edge is a single peak (Tâmpa), lit in the accent colour from
-  left to right on hover and focus (`src/shared/ui/creasta`). The showroom's street signs the home page.
+- **Lamă** — the UI material: square graphite plates with a hairline outline and a thin accent rule on the top edge,
+  drawn out along the whole edge on hover and focus (`src/shared/ui/lama`). The showroom's street signs the home page.
 
 ```bash
 npm install
@@ -153,7 +153,7 @@ src/
       lib/                feature logic (e.g. lead delivery)
       index.ts            public API — import features only through this
   shared/
-    ui/creasta/            Creastă surface, CreastaButton, CreastaIconButton, CreastaTabs
+    ui/lama/            Lamă surface, LamaButton, LamaIconButton, LamaTabs
     ui/media/             ResponsiveImage (art-directed next/image), ResponsiveVideo
     ui/motion/            PinOnScroll (GSAP ScrollTrigger), Reveal (plain wrapper: text is not animated in)
     ui/slider-dots/ ui/markdown/ ui/scroll-to-top/
@@ -170,11 +170,11 @@ public/media/             images & videos, grouped per feature
 **Sizing:** as on the original site, `1rem` = 100px on a 1920px-wide screen (and on a 750px mobile design), so values
 can be copied straight from the design files (48px → `0.48rem`).
 
-**Creasta:** `creasta.surface` (from `@/shared/ui/creasta`) gives any element the site's material — a flat graphite
-plate with the top-right and bottom-left corners cut and marked in the route colour; on `creasta.interactive` elements
+**Lama:** `lama.surface` (from `@/shared/ui/lama`) gives any element the site's material — a flat graphite
+plate with the top-right and bottom-left corners cut and marked in the route colour; on `lama.interactive` elements
 the route line is traced around the whole edge on hover and keyboard focus (pure CSS, same on touch screens). Tune per
-element with `--creasta-accent`, `--creasta-tint`, `--creasta-base`, `--creasta-blur` and `--creasta-cut` (`--creasta-cut-tr`
-/ `--creasta-cut-bl` for one corner, `0px` = square). Filled buttons outside a surface use `clip-path: var(--cut-sm)`.
+element with `--lama-accent`, `--lama-tint`, `--lama-base`, `--lama-blur` and `--lama-cut` (`--lama-cut-tr`
+/ `--lama-cut-bl` for one corner, `0px` = square). Filled buttons outside a surface use `clip-path: var(--cut-sm)`.
 The site accent is `--color-accent` (Freedom Blue) in `globals.css`; model pages set their own (`accent` in the model's
 data file): orange for PHEV, green for BEV.
 

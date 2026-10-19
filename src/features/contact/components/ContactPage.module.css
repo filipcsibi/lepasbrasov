@@ -71,8 +71,8 @@
 }
 
 .card {
-  --creasta-cut: 0.2rem;
-  --creasta-base: rgba(22, 23, 29, 0.9);
+  --lama-cut: 0.2rem;
+  --lama-base: rgba(22, 23, 29, 0.9);
   padding: 0.3rem 0.34rem;
 }
 
@@ -128,8 +128,8 @@
 }
 
 .map {
-  --creasta-cut: 0.2rem;
-  --creasta-base: rgba(22, 23, 29, 0.9);
+  --lama-cut: 0.2rem;
+  --lama-base: rgba(22, 23, 29, 0.9);
   min-height: 4.6rem;
   overflow: hidden;
 }
@@ -204,7 +204,7 @@
   }
 
   .card {
-    --creasta-cut: 0.28rem;
+    --lama-cut: 0.28rem;
     padding: 0.34rem 0.32rem;
   }
 
@@ -226,7 +226,7 @@
   }
 
   .map {
-    --creasta-cut: 0.28rem;
+    --lama-cut: 0.28rem;
     min-height: 7rem;
   }
 

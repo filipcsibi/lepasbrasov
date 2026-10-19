@@ -2,8 +2,8 @@
 
 import clsx from "clsx";
 import type { CSSProperties } from "react";
-import creasta from "./creasta.module.css";
-import styles from "./CreastaTabs.module.css";
+import lama from "./lama.module.css";
+import styles from "./LamaTabs.module.css";
 
 type Props<T extends string> = {
   options: { value: T; label: string }[];
@@ -13,14 +13,14 @@ type Props<T extends string> = {
   className?: string;
 };
 
-/** Creasta segmented control with a sliding highlight. */
-export function CreastaTabs<T extends string>({ options, value, onChange, label, className }: Props<T>) {
+/** Lama segmented control with a sliding highlight. */
+export function LamaTabs<T extends string>({ options, value, onChange, label, className }: Props<T>) {
   const index = options.findIndex((o) => o.value === value);
   return (
     <div
       role="tablist"
       aria-label={label}
-      className={clsx(creasta.surface, styles.tabs, className)}
+      className={clsx(lama.surface, styles.tabs, className)}
       style={{ "--count": options.length, "--index": index } as CSSProperties}
     >
       <span className={styles.thumb} aria-hidden="true" />

@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import type { CSSProperties } from "react";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import { useModelText } from "../../lib/model-context";
 import type { ColorOption } from "../../types";
 import styles from "./shared.module.css";
@@ -15,7 +15,7 @@ export function ColorPicker({ colors, active, onChange, className }: Props) {
   const t = useTranslations("models.ui");
   const name = useModelText();
   return (
-    <div role="radiogroup" aria-label={t("colors")} className={clsx(creasta.surface, styles.picker, className)}>
+    <div role="radiogroup" aria-label={t("colors")} className={clsx(lama.surface, styles.picker, className)}>
       {colors.map((c, i) => (
         <button
           key={c.image.src}

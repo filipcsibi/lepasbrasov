@@ -1,14 +1,14 @@
 .dots {
   --progress: 0;
-  --creasta-tint: rgba(255, 255, 255, 0.06);
-  --creasta-cut: 0.08rem;
+  --lama-tint: rgba(255, 255, 255, 0.06);
+  --lama-cut: 0.08rem;
   display: inline-flex;
   align-items: center;
   padding: 0 0.1rem;
 }
 
 .dark {
-  --creasta-tint: rgba(0, 0, 0, 0.08);
+  --lama-tint: rgba(0, 0, 0, 0.08);
 }
 
 /* One dash per slide, like the centre line of a road; the active one is longer and fills as the slide plays. */

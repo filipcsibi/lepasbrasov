@@ -8,7 +8,7 @@ import { Autoplay, Parallax } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { siteConfig } from "@/config/site";
 import { Link } from "@/i18n/navigation";
-import { CreastaIconButton } from "@/shared/ui/creasta";
+import { LamaIconButton } from "@/shared/ui/lama";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { SliderDots } from "@/shared/ui/slider-dots";
 import { useIsMobile } from "@/shared/hooks/useMediaQuery";
@@ -128,7 +128,7 @@ export function HeroCarousel({ slides, imageDuration }: Props) {
                       onClick={band ? () => openFullscreen(slide) : undefined}
                     />
                     {band && (
-                      <CreastaIconButton
+                      <LamaIconButton
                         icon="play"
                         size="lg"
                         label={tc("play")}

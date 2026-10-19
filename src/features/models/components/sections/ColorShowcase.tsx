@@ -2,7 +2,7 @@
 
 import clsx from "clsx";
 import { useState } from "react";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { Reveal } from "@/shared/ui/motion";
 import { useModelText } from "../../lib/model-context";
@@ -33,7 +33,7 @@ export function ColorShowcase({ section }: { section: ColorShowcaseSection }) {
           {t(section.titleKey)}
         </Reveal>
       </div>
-      <div className={clsx(creasta.surface, styles.bar)}>
+      <div className={clsx(lama.surface, styles.bar)}>
         {section.colors[active].nameKey && <p className={styles.name}>{t(section.colors[active].nameKey!)}</p>}
         <ColorPicker colors={section.colors} active={active} onChange={setActive} className={styles.picker} />
       </div>

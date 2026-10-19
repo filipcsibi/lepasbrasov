@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { CreastaButton } from "@/shared/ui/creasta";
+import { LamaButton } from "@/shared/ui/lama";
 import styles from "./NotFoundView.module.css";
 
 export async function NotFoundView() {
@@ -10,7 +10,7 @@ export async function NotFoundView() {
       <img src="/media/shared/error_pic.png" alt="" className={styles.picture} />
       <h1 className={styles.code}>{t("notFound.title")}</h1>
       <p className={styles.text}>{t("notFound.text")}</p>
-      <CreastaButton href="/">{t("actions.backToHome")}</CreastaButton>
+      <LamaButton href="/">{t("actions.backToHome")}</LamaButton>
     </section>
   );
 }

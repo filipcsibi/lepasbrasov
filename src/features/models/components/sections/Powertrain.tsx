@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import { Reveal } from "@/shared/ui/motion";
 import { useModelText } from "../../lib/model-context";
 import type { PowertrainSection } from "../../types";
@@ -32,7 +32,7 @@ export function Powertrain({ section }: { section: PowertrainSection }) {
 
       <dl className={styles.stats}>
         {section.stats.map((spec) => (
-          <div key={spec.labelKey} className={clsx(creasta.surface, styles.stat)}>
+          <div key={spec.labelKey} className={clsx(lama.surface, styles.stat)}>
             <dd>
               <SpecValue spec={spec} className={styles.value} />
             </dd>

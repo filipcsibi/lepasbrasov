@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useTransition } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import styles from "./LanguageSwitcher.module.css";
 
 /** Segmented control: RO | EN. Keeps the visitor on the same page. */
@@ -35,7 +35,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
     <div
       role="group"
       aria-label={t("language")}
-      className={clsx(creasta.surface, styles.switcher, className)}
+      className={clsx(lama.surface, styles.switcher, className)}
       data-pending={isPending || undefined}
       style={{ ["--active" as string]: activeIndex }}
     >

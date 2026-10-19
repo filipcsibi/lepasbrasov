@@ -131,10 +131,10 @@
 
 /* Detail panel */
 .panel {
-  --creasta-cut-tr: 0px;
-  --creasta-cut-bl: 0.3rem;
-  --creasta-tint: rgba(5, 3, 5, 0.6);
-  --creasta-blur: 24px;
+  --lama-cut-tr: 0px;
+  --lama-cut-bl: 0.3rem;
+  --lama-tint: rgba(5, 3, 5, 0.6);
+  --lama-blur: 24px;
   position: absolute !important;
   top: 0;
   right: 0;

@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useState, type CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
 import { navigation } from "@/config/navigation";
-import { creasta, CreastaButton } from "@/shared/ui/creasta";
+import { lama, LamaButton } from "@/shared/ui/lama";
 import { useIsMobile } from "@/shared/hooks/useMediaQuery";
 import { ArrowLeftIcon } from "./icons";
 import styles from "./MenuPanel.module.css";
@@ -50,7 +50,7 @@ export function MenuPanel({ open, onClose }: Props) {
     >
       <div className={styles.backdrop} onClick={onClose} />
 
-      <nav className={clsx(creasta.surface, styles.panel)} aria-label={t("nav.menu")}>
+      <nav className={clsx(lama.surface, styles.panel)} aria-label={t("nav.menu")}>
         {/* Model imagery behind the list (desktop). */}
         {showModels &&
           models.map((m, i) => (
@@ -142,9 +142,9 @@ export function MenuPanel({ open, onClose }: Props) {
           <div key={m.model!.id} className={clsx(styles.previewItem, i === modelIndex && styles.visible)}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={m.model!.previewImage} alt="" />
-            <CreastaButton href={m.href} className={styles.previewCta}>
+            <LamaButton href={m.href} className={styles.previewCta}>
               {t("actions.discoverMore")}
-            </CreastaButton>
+            </LamaButton>
           </div>
         ))}
         {activeModel && <span className="sr-only">{t(`nav.links.${activeModel.labelKey}` as "nav.links.legal")}</span>}

@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import { useLocale, useTranslations } from "next-intl";
 import { useId, useMemo, useState, type CSSProperties } from "react";
-import { CreastaTabs } from "@/shared/ui/creasta";
+import { LamaTabs } from "@/shared/ui/lama";
 import { Reveal } from "@/shared/ui/motion";
 import { destinations, origin, rangeModes, roadFactor, type RangeModeId } from "../config";
 import { mapSize, outlinePath, project } from "../lib/projection";
@@ -42,7 +42,7 @@ export function RangeMap({ modes, initialMode }: Props) {
   return (
     <section
       className={styles.section}
-      style={{ "--accent": mode.accent, "--creasta-accent": mode.accent } as CSSProperties}
+      style={{ "--accent": mode.accent, "--lama-accent": mode.accent } as CSSProperties}
     >
       <div className={styles.copy}>
         <Reveal as="p" className={styles.eyebrow}>
@@ -57,7 +57,7 @@ export function RangeMap({ modes, initialMode }: Props) {
 
         <div className={styles.controls}>
           {available.length > 1 && (
-            <CreastaTabs
+            <LamaTabs
               label={t("modeLabel")}
               className={styles.tabs}
               value={mode.id}
@@ -65,7 +65,7 @@ export function RangeMap({ modes, initialMode }: Props) {
               options={available.map((m) => ({ value: m.id, label: t(`modes.${m.labelKey}`) }))}
             />
           )}
-          <CreastaTabs
+          <LamaTabs
             label={t("tripLabel")}
             className={clsx(styles.tabs, styles.tripTabs)}
             value={trip}

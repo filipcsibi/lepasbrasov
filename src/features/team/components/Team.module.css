@@ -53,12 +53,10 @@
 }
 
 .card {
-  --creasta-cut: 0.2rem;
-  --creasta-base: rgba(22, 23, 29, 0.9);
-  --creasta-tint: rgba(255, 255, 255, 0.05);
+  --lama-cut: 0.2rem;
+  --lama-base: rgba(22, 23, 29, 0.9);
+  --lama-tint: rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  /* The portrait follows the ridge of the plate. */
-  clip-path: var(--_shape);
   color: var(--color-white);
 }
 
@@ -133,7 +131,7 @@
   }
 
   .card {
-    --creasta-cut: 0.28rem;
+    --lama-cut: 0.28rem;
   }
 
   .body {

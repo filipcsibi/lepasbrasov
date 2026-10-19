@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import type { CSSProperties } from "react";
 import { Link } from "@/i18n/navigation";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import { useModel } from "../../lib/model-context";
 import { variantPages } from "../../types";
 import styles from "./VariantSwitch.module.css";
@@ -19,7 +19,7 @@ export function VariantSwitch({ className }: { className?: string }) {
   return (
     <nav
       aria-label={t("variants")}
-      className={clsx(creasta.surface, styles.switch, className)}
+      className={clsx(lama.surface, styles.switch, className)}
       style={{ "--count": variantPages.length, "--index": index } as CSSProperties}
     >
       <span className={styles.thumb} aria-hidden="true" />

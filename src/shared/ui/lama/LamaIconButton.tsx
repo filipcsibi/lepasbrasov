@@ -1,8 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import creasta from "./creasta.module.css";
-import styles from "./CreastaIconButton.module.css";
+import lama from "./lama.module.css";
+import styles from "./LamaIconButton.module.css";
 
 type Props = {
   icon: "prev" | "next" | "close" | "play" | "pause";
@@ -21,15 +21,15 @@ const paths: Record<Props["icon"], string> = {
   pause: "M8.5 5.5v13M15.5 5.5v13",
 };
 
-/** Square Creasta button for carousel arrows, close and play controls. */
-export function CreastaIconButton({ icon, label, onClick, className, size = "md", disabled }: Props) {
+/** Square Lama button for carousel arrows, close and play controls. */
+export function LamaIconButton({ icon, label, onClick, className, size = "md", disabled }: Props) {
   return (
     <button
       type="button"
       aria-label={label}
       disabled={disabled}
       onClick={onClick}
-      className={clsx(creasta.surface, creasta.interactive, styles.button, styles[size], className)}
+      className={clsx(lama.surface, lama.interactive, styles.button, styles[size], className)}
     >
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path

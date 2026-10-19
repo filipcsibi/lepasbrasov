@@ -29,7 +29,7 @@
 }
 
 .socialIcon {
-  --creasta-tint: rgba(255, 255, 255, 0.04);
+  --lama-tint: rgba(255, 255, 255, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;

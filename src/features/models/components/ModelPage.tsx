@@ -47,7 +47,7 @@ export function ModelPage({ model }: { model: ModelDefinition }) {
         style={
           {
             background: model.background,
-            ...(model.accent && { "--model-accent": model.accent, "--creasta-accent": model.accent }),
+            ...(model.accent && { "--model-accent": model.accent, "--lama-accent": model.accent }),
           } as CSSProperties
         }
       >

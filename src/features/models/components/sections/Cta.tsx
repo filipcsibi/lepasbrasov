@@ -1,6 +1,6 @@
 "use client";
 
-import { CreastaButton } from "@/shared/ui/creasta";
+import { LamaButton } from "@/shared/ui/lama";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { Reveal } from "@/shared/ui/motion";
 import { useModel, useModelText } from "../../lib/model-context";
@@ -24,9 +24,9 @@ export function Cta({ section }: { section: CtaSection }) {
         </Reveal>
         <Reveal className={styles.actions} delay={0.16}>
           {section.actions.map((action, i) => (
-            <CreastaButton key={action.labelKey} href={action.href} tint={i === 0 ? accent : undefined}>
+            <LamaButton key={action.labelKey} href={action.href} tint={i === 0 ? accent : undefined}>
               {t(action.labelKey)}
-            </CreastaButton>
+            </LamaButton>
           ))}
         </Reveal>
       </div>

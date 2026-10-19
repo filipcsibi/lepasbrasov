@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { startTransition, useActionState, useEffect, useState, type FormEvent } from "react";
 import { markLeadSubmitted } from "@/features/analytics";
 import { Link, useRouter } from "@/i18n/navigation";
-import { creasta } from "@/shared/ui/creasta";
+import { lama } from "@/shared/ui/lama";
 import {
   leadModels,
   readAttribution,
@@ -73,7 +73,7 @@ export function LeadForm({ model, showModelSelect, title, subtitle, submitLabel 
     ) : null;
 
   return (
-    <form id="formular" action={action} onSubmit={onSubmit} className={clsx(creasta.surface, styles.form)} noValidate>
+    <form id="formular" action={action} onSubmit={onSubmit} className={clsx(lama.surface, styles.form)} noValidate>
       <h2 className={styles.title}>{title}</h2>
       <p className={styles.subtitle}>{subtitle}</p>
 

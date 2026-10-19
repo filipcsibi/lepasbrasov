@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { getImageDimensions } from "@/shared/lib/image-dimensions";
-import { CreastaButton } from "@/shared/ui/creasta";
+import { LamaButton } from "@/shared/ui/lama";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { PinOnScroll, Reveal } from "@/shared/ui/motion";
 import type { ModelShowcaseItem } from "../content";
@@ -32,15 +32,15 @@ export async function ModelShowcase({ items }: { items: ModelShowcaseItem[] }) {
               {item.links && (
                 <Reveal delay={0.15} className={styles.cta}>
                   {item.links.map((link) => (
-                    <CreastaButton key={link.label} href={link.href} accent={link.accent}>
+                    <LamaButton key={link.label} href={link.href} accent={link.accent}>
                       {link.label}
-                    </CreastaButton>
+                    </LamaButton>
                   ))}
                 </Reveal>
               )}
               {item.href && !item.links && (
                 <Reveal delay={0.15} className={styles.cta}>
-                  <CreastaButton href={item.href}>{tc("discoverMore")}</CreastaButton>
+                  <LamaButton href={item.href}>{tc("discoverMore")}</LamaButton>
                 </Reveal>
               )}
             </div>
