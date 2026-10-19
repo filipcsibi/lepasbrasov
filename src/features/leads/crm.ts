@@ -12,7 +12,7 @@ export const salesPartner = {
   vehicleUsedStatus: "NOU",
   vehicleType: "AUTOTURISM",
   /** Dealer location code of LEPAS Brașov (Dip Motors) in lepas-ims. */
-  dealerWorkPlaceCode: "TODO-DEALER-CODE",
+  dealerWorkPlaceCode: "D-0007-01",
   /**
    * "Intention to buy", from the visitor's answer to "When would you like to come?".
    * `default` is used when there is no answer (contact form, or the question was skipped) and is the
