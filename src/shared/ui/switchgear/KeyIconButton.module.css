@@ -1,0 +1,66 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  border-radius: var(--panel-radius);
+}
+
+.md {
+  --panel-radius: 0.16rem;
+  width: 0.52rem;
+  height: 0.52rem;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.lg {
+  --panel-radius: 0.28rem;
+  width: 0.96rem;
+  height: 0.96rem;
+  min-width: 56px;
+  min-height: 56px;
+}
+
+.button svg {
+  position: relative;
+  z-index: 2;
+  width: 45%;
+  height: 45%;
+  filter: drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.6));
+  transition:
+    color 0.25s ease,
+    filter 0.25s ease;
+}
+
+.button:focus-visible svg,
+.button:active svg {
+  color: var(--key-accent, var(--color-accent));
+  filter: drop-shadow(0 0 0.06rem var(--key-accent, var(--color-accent)));
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover svg {
+    color: var(--key-accent, var(--color-accent));
+    filter: drop-shadow(0 0 0.06rem var(--key-accent, var(--color-accent)));
+  }
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  .md {
+    --panel-radius: 0.2rem;
+    width: 0.72rem;
+    height: 0.72rem;
+  }
+
+  .lg {
+    --panel-radius: 0.34rem;
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}

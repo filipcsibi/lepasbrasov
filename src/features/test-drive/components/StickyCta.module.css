@@ -1,0 +1,58 @@
+.button {
+  composes: keycap from "../../../shared/ui/switchgear/keycap.module.css";
+}
+
+.bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .bar {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-float);
+    display: flex;
+    align-items: center;
+    gap: 0.24rem;
+    padding: 0.2rem 0.3rem calc(0.2rem + env(safe-area-inset-bottom));
+    background: rgba(11, 12, 16, 0.86);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    backdrop-filter: blur(16px) saturate(160%);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--color-white);
+    transform: translateY(110%);
+    visibility: hidden;
+    transition:
+      transform 0.35s var(--ease-out-power2),
+      visibility 0s linear 0.35s;
+  }
+
+  .bar.visible {
+    transform: none;
+    visibility: visible;
+    transition:
+      transform 0.35s var(--ease-out-power2),
+      visibility 0s;
+  }
+
+  .price {
+    flex-shrink: 0;
+    font-size: 0.3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .button {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1rem;
+    padding-top: 0.1rem;
+    font-size: 0.28rem;
+    font-weight: 600;
+  }
+}

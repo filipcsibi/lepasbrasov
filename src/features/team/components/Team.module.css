@@ -1,0 +1,149 @@
+.page {
+  min-height: 100vh;
+  padding: calc(var(--header-height) + 0.9rem) var(--page-gutter) 1.2rem;
+  color: var(--color-white);
+  background:
+    radial-gradient(
+      50% 50% at 85% 0%,
+      color-mix(in srgb, var(--color-accent-bright) 14%, transparent),
+      transparent 70%
+    ),
+    #0b0c10;
+}
+
+.header {
+  max-width: 9.4rem;
+}
+
+.eyebrow {
+  font-size: var(--font-size-2);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-bright);
+}
+
+.title {
+  margin-top: 0.12rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.text {
+  margin-top: 0.2rem;
+  max-width: 7.4rem;
+  font-size: var(--font-size-3);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.actions {
+  display: flex;
+  margin-top: 0.6rem;
+}
+
+/* Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.3rem;
+  margin-top: 0.7rem;
+}
+
+.card {
+  overflow: hidden;
+  color: var(--color-white);
+}
+
+.photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(160deg, #23252d, #14151a);
+}
+
+.photo img {
+  object-fit: cover;
+  object-position: 50% 20%;
+}
+
+.body {
+  position: relative;
+  z-index: 2;
+  padding: 0.3rem 0.3rem 0.32rem;
+}
+
+.name {
+  font-size: var(--font-size-5);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.role {
+  margin-top: 0.04rem;
+  font-size: var(--font-size-2);
+  color: var(--color-accent-bright);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.04rem;
+  margin-top: 0.14rem;
+  font-size: var(--font-size-2);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.links a {
+  overflow-wrap: anywhere;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--color-accent-bright);
+}
+
+@media (max-width: 767px) {
+  .page {
+    padding: 1.9rem var(--page-gutter) 1rem;
+  }
+
+  .eyebrow {
+    font-size: 0.24rem;
+  }
+
+  .title {
+    font-size: 0.64rem;
+  }
+
+  .text {
+    font-size: 0.28rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.2rem;
+    margin-top: 0.5rem;
+  }
+
+  .card {
+  }
+
+  .body {
+    padding: 0.22rem 0.16rem 0.26rem;
+  }
+
+  .name {
+    font-size: 0.3rem;
+  }
+
+  .role {
+    font-size: 0.24rem;
+  }
+
+  /* Small enough for a full e-mail address to fit on one line of a half-width card. */
+  .links {
+    font-size: 0.2rem;
+  }
+}

@@ -1,0 +1,68 @@
+/*
+ * Keycap for buttons that are styled in their own feature (form submits, sticky call-to-action):
+ * `composes: keycap from "<relative path>/switchgear/keycap.module.css"`. Its LED is always lit.
+ */
+.keycap {
+  position: relative;
+  isolation: isolate;
+  border-radius: 0.2rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 45%),
+    linear-gradient(180deg, #34353a, #232427);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 0 0 1px #040405,
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.5),
+    0 0.03rem 0.05rem rgba(0, 0, 0, 0.45),
+    0 0.16rem 0.32rem -0.08rem rgba(0, 0, 0, 0.6);
+}
+
+.keycap::before {
+  content: "";
+  position: absolute;
+  top: 0.09rem;
+  left: 50%;
+  width: 0.22rem;
+  height: 0.04rem;
+  border-radius: 0.04rem;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  box-shadow:
+    0 0 0.06rem var(--color-accent),
+    0 0 0.16rem color-mix(in srgb, var(--color-accent) 70%, transparent);
+}
+
+.keycap:disabled::before {
+  background: #55565b;
+  box-shadow: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .keycap:hover:not(:disabled) {
+    filter: brightness(1.12);
+  }
+}
+
+.keycap:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow:
+    0 0 0 1px #040405,
+    inset 0 2px 5px rgba(0, 0, 0, 0.6),
+    0 0.01rem 0.02rem rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) {
+  .keycap {
+    border-radius: 0.26rem;
+  }
+
+  .keycap::before {
+    top: 0.13rem;
+    width: 0.34rem;
+    height: 0.06rem;
+  }
+}
