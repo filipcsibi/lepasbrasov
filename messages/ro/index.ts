@@ -11,7 +11,8 @@ import testDrive from "./testDrive.json";
 import rangeMap from "./rangeMap.json";
 import advisor from "./advisor.json";
 import contact from "./contact.json";
+import team from "./team.json";
 
-const messages = { common, home, models, about, legal, testDrive, rangeMap, advisor, contact };
+const messages = { common, home, models, about, legal, testDrive, rangeMap, advisor, contact, team };
 
 export default messages;

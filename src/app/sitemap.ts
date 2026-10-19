@@ -11,6 +11,7 @@ const staticPages: AppPathname[] = [
   "/",
   "/test-drive",
   "/contact",
+  "/team",
   "/about/introduction",
   "/about/brand-values",
   "/legal",

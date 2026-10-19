@@ -12,8 +12,20 @@ import testDrive from "./testDrive.json";
 import rangeMap from "./rangeMap.json";
 import advisor from "./advisor.json";
 import contact from "./contact.json";
+import team from "./team.json";
 
 // `satisfies` makes TypeScript flag any key that exists in Romanian but is missing here.
-const messages = { common, home, models, about, legal, testDrive, rangeMap, advisor, contact } satisfies typeof ro;
+const messages = {
+  common,
+  home,
+  models,
+  about,
+  legal,
+  testDrive,
+  rangeMap,
+  advisor,
+  contact,
+  team,
+} satisfies typeof ro;
 
 export default messages;

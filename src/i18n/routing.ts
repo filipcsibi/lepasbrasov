@@ -20,6 +20,7 @@ export const routing = defineRouting({
     "/about/introduction": { ro: "/despre/introducere", en: "/about/introduction" },
     "/about/brand-values": { ro: "/despre/valorile-brandului", en: "/about/brand-values" },
     "/contact": "/contact",
+    "/team": { ro: "/echipa", en: "/team" },
     "/test-drive": "/test-drive",
     "/test-drive/thanks": { ro: "/test-drive/multumim", en: "/test-drive/thank-you" },
     "/test-drive/[model]": "/test-drive/[model]",

@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "title": "Echipa LEPAS Brașov",
+    "description": "Cunoaște echipa LEPAS Brașov: oamenii care te ajută să alegi, să testezi și să întreții mașina ta LEPAS."
+  },
+  "eyebrow": "Echipa",
+  "title": "Oamenii din spatele LEPAS Brașov",
+  "text": "Te așteptăm la showroom cu răspunsuri clare despre modele, prețuri, finanțare și service. Alege cu cine vrei să vorbești.",
+  "roles": {
+    "salesDirector": "Director vânzări",
+    "sales": "Consilier vânzări"
+  },
+  "call": "Sună",
+  "email": "Scrie un e-mail",
+  "contact": "Contactează showroomul"
+}

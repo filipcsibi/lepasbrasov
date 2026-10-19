@@ -22,6 +22,7 @@
     "groups": {
       "models": "Models",
       "about": "About LEPAS",
+      "team": "Team",
       "contact": "Contact"
     },
     "links": {
@@ -31,6 +32,7 @@
       "lepasL4": "LEPAS L4",
       "introduction": "Introduction",
       "brandValues": "Brand Values",
+      "team": "Team",
       "legal": "Legal",
       "privacy": "Privacy Statement",
       "cookies": "Cookies Policy",

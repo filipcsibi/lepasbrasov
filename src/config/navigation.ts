@@ -83,6 +83,10 @@ export const navigation: NavGroup[] = [
     ],
   },
   {
+    labelKey: "team",
+    links: [{ labelKey: "team", href: "/team" }],
+  },
+  {
     labelKey: "contact",
     links: [{ labelKey: "contact", href: "/contact" }],
   },
