@@ -21,8 +21,6 @@ export type ModelShowcaseItem = {
   id: string;
   /** Key in `home.models` — used as the accessible title. */
   titleKey: "lepasL8" | "lepasL6" | "lepasL4";
-  /** Extra buttons, e.g. one per drivetrain. Replaces the single `href` button. */
-  links?: { label: string; href: NavHref; /** Colour of the light on the button's edge. */ accent: string }[];
   image: string;
   /** Phone artwork. Portrait images fill the screen; wide ones become a card with the logo below. */
   mobileImage: string;
@@ -30,6 +28,7 @@ export type ModelShowcaseItem = {
   logo: string;
   /** "View model details" CTA (brand guide p.16). Omit to hide the button. */
   href?: NavHref;
+  ctaKey?: "discoverMore" | "discoverL6";
 };
 
 export const homeContent = {
@@ -76,14 +75,9 @@ export const homeContent = {
       image: "/media/home/1759047784736400.jpg",
       mobileImage: "/media/home/1757991620677280.jpg",
       logo: "/media/home/root1757919896556431.png",
-      links: [
-        {
-          label: "L6 PHEV",
-          href: { pathname: "/models/[slug]", params: { slug: "lepas-l6-phev" } },
-          accent: "#eb9201",
-        },
-        { label: "L6 BEV", href: { pathname: "/models/[slug]", params: { slug: "lepas-l6-bev" } }, accent: "#00a985" },
-      ],
+      href: { pathname: "/models/[slug]", params: { slug: "lepas-l6-phev" } },
+      /** Key in `common.actions` for the button text (default: discoverMore). */
+      ctaKey: "discoverL6",
     },
     {
       id: "lepas-l4",

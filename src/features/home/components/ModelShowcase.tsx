@@ -29,18 +29,9 @@ export async function ModelShowcase({ items }: { items: ModelShowcaseItem[] }) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={item.logo} alt={t(item.titleKey)} className={styles.logo} width={385} height={73} />
               </Reveal>
-              {item.links && (
+              {item.href && (
                 <Reveal delay={0.15} className={styles.cta}>
-                  {item.links.map((link) => (
-                    <LamaButton key={link.label} href={link.href} accent={link.accent}>
-                      {link.label}
-                    </LamaButton>
-                  ))}
-                </Reveal>
-              )}
-              {item.href && !item.links && (
-                <Reveal delay={0.15} className={styles.cta}>
-                  <LamaButton href={item.href}>{tc("discoverMore")}</LamaButton>
+                  <LamaButton href={item.href}>{tc(item.ctaKey ?? "discoverMore")}</LamaButton>
                 </Reveal>
               )}
             </div>

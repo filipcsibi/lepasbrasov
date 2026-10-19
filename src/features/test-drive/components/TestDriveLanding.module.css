@@ -376,7 +376,7 @@
   padding: 0 0.44rem;
   clip-path: var(--cut-sm);
   background: linear-gradient(180deg, var(--color-accent-bright), var(--color-accent));
-  color: #1a1203;
+  color: #fff;
   font-size: 0.19rem;
   font-weight: 700;
   white-space: nowrap;
@@ -454,7 +454,7 @@
   margin-bottom: 0.2rem;
   border-radius: 50%;
   background: var(--color-accent);
-  color: #1a1203;
+  color: #fff;
   font-size: 0.22rem;
   font-weight: 700;
 }

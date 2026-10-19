@@ -112,7 +112,7 @@
 
 .primary {
   background: linear-gradient(180deg, var(--color-accent-bright), var(--color-accent));
-  color: #1a1203;
+  color: #fff;
 }
 
 .secondary {

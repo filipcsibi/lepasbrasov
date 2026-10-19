@@ -17,9 +17,9 @@
   --color-slate-gray: #969392;
   --color-jet-black: #000;
 
-  /* LEPAS Brașov: the accent colour (Carpathian forest green) — links, highlights, calls to action and focus rings. */
-  --color-accent: #0f9d7a;
-  --color-accent-bright: #34d3a8;
+  /* LEPAS Brașov: the accent colour (deep Carpathian emerald) — links, highlights, calls to action and focus rings. */
+  --color-accent: #14795f;
+  --color-accent-bright: #4fc9a4;
 
   /* Pill shape for filled buttons and highlights outside a Lama surface. */
   --cut-sm: inset(0 round 999px);
