@@ -67,16 +67,23 @@ export function MenuPanel({ open, onClose }: Props) {
         <ul className={clsx(styles.list, styles.level1, activeGroup && styles.away)}>
           {navigation.map((group, i) => (
             <li key={group.labelKey} style={{ "--i": navigation.length - i } as CSSProperties}>
-              <button
-                type="button"
-                className={styles.item}
-                onClick={() => {
-                  setGroupIndex(i);
-                  setModelIndex(0);
-                }}
-              >
-                <span>{t(`nav.groups.${group.labelKey}` as "nav.groups.models")}</span>
-              </button>
+              {group.links.length === 1 && !group.links[0].model ? (
+                // A group with a single page goes straight to it, without a second level.
+                <Link href={group.links[0].href} className={styles.item} onClick={onClose}>
+                  <span>{t(`nav.groups.${group.labelKey}` as "nav.groups.models")}</span>
+                </Link>
+              ) : (
+                <button
+                  type="button"
+                  className={styles.item}
+                  onClick={() => {
+                    setGroupIndex(i);
+                    setModelIndex(0);
+                  }}
+                >
+                  <span>{t(`nav.groups.${group.labelKey}` as "nav.groups.models")}</span>
+                </button>
+              )}
             </li>
           ))}
         </ul>

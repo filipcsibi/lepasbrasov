@@ -31,13 +31,36 @@ export type LamaButtonProps = InternalLinkProps | ExternalLinkProps | ActionProp
  */
 export function LamaButton(props: LamaButtonProps) {
   const { children, className, tint, accent, size = "md" } = props;
-  const classes = clsx(lama.surface, lama.interactive, styles.button, styles[size], className);
+  const classes = clsx(
+    lama.surface,
+    lama.interactive,
+    styles.button,
+    styles[size],
+    (tint || accent) && styles.solid,
+    className,
+  );
   const style = accent
     ? ({ "--lama-accent": accent } as CSSProperties)
     : tint
       ? ({ "--lama-base": tint, "--lama-accent": tint } as CSSProperties)
       : undefined;
-  const label = <span className={styles.label}>{children}</span>;
+  const label = (
+    <>
+      <span className={styles.label}>{children}</span>
+      <span className={styles.chip} aria-hidden="true">
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3 8h10M9 4l4 4-4 4" />
+        </svg>
+      </span>
+    </>
+  );
 
   if ("href" in props) {
     return (
