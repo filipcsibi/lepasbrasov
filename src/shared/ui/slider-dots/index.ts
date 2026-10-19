@@ -1,1 +1,0 @@
-export { SliderDots } from "./SliderDots";

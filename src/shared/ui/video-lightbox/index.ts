@@ -1,1 +1,0 @@
-export { VideoLightbox } from "./VideoLightbox";
