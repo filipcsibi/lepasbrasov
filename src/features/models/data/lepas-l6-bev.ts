@@ -22,7 +22,7 @@ export const lepasL6Bev: ModelDefinition = {
       eyebrowKey: "eyebrow",
       titleKey: "name",
       subtitleKey: "subtitle",
-      action: { labelKey: "actions.offer", href: { pathname: "/test-drive", query: { model: "lepas-l6-bev" } } },
+      action: { labelKey: "actions.offer", href: { pathname: "/contact", query: { model: "lepas-l6-bev" } } },
     },
     {
       type: "powertrain",
@@ -57,7 +57,7 @@ export const lepasL6Bev: ModelDefinition = {
       titleKey: "cta.title",
       textKey: "cta.text",
       actions: [
-        { labelKey: "actions.offer", href: { pathname: "/test-drive", query: { model: "lepas-l6-bev" } } },
+        { labelKey: "actions.offer", href: { pathname: "/contact", query: { model: "lepas-l6-bev" } } },
         { labelKey: "actions.otherVariant", href: { pathname: "/models/[slug]", params: { slug: "lepas-l6-phev" } } },
       ],
     },

@@ -20,9 +20,14 @@ export function ContactForm() {
     null,
   );
 
+  const [model, setModel] = useState<string>(leadModels[0].slug);
+
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- browser-only values (clock, URL, sessionStorage)
     setClient({ startedAt: Date.now(), page: window.location.pathname, attribution: readAttribution() });
+    // A model page can send the visitor here with its model already chosen (`?model=lepas-l6-bev`).
+    const requested = new URLSearchParams(window.location.search).get("model");
+    if (leadModels.some((m) => m.slug === requested)) setModel(requested!);
   }, []);
 
   // Submitting through `action={…}` would clear the fields when validation fails; this keeps what was typed.
@@ -103,7 +108,7 @@ export function ContactForm() {
 
         <label className={styles.field}>
           <span className={styles.label}>{t("model")}</span>
-          <select name="model" defaultValue={leadModels[0].slug}>
+          <select name="model" value={model} onChange={(e) => setModel(e.target.value)}>
             {leadModels.map((m) => (
               <option key={m.slug} value={m.slug}>
                 {m.name}
