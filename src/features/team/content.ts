@@ -31,6 +31,6 @@ export const teamMembers: TeamMember[] = [
     id: "miruna-s",
     name: "Miruna S.",
     role: "sales",
-    photo: "/media/team/miruna-s.jpg",
+    photo: "/media/team/miruna-s-portrait.jpg",
   },
 ];
