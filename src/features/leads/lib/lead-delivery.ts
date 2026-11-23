@@ -2,10 +2,11 @@ import { sendToSalesPartner } from "./salespartner";
 import type { Lead } from "./validation";
 
 /**
- * Sends a lead to the SalesPartner CRM (lepas-ims) — the only destination, the lead is created directly there.
- * Configured with env vars (the same endpoint and keys as the other LEPAS sites):
+ * Sends a lead to the Dip Motors LEPAS DMS (the dealer's own SalesPartner instance) — the only destination,
+ * the lead is created directly there, without passing through the importer's lepas-ims.
+ * Configured with env vars (this dealer's own endpoint and keys):
  *
- *   CRM_WEBHOOK_URL_LEPAS   lead endpoint of the lepas-ims SalesPartner instance
+ *   CRM_WEBHOOK_URL_LEPAS   https://dip-motors.cloud40.salespartner.app/api/public/collect-lead
  *   CRM_API_KEY_LEPAS       sent as X-API-Key
  *   CRM_API_SECRET_LEPAS    sent as X-API-Secret
  */

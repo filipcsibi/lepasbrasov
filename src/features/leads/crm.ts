@@ -1,7 +1,7 @@
-import type { Timeframe } from "./config";
-
 /**
- * SalesPartner (CRM) — the fixed values sent with every lead from this site.
+ * SalesPartner — the fixed values sent with every lead from this site.
+ * Leads are created directly in the dealer's own instance (the Dip Motors LEPAS DMS), not in the importer's
+ * lepas-ims: the DMS takes no dealer code and no "intention to buy", the consultant is assigned there.
  * Server only: imported by the delivery code, never by the forms.
  * The endpoint and keys come from the environment: CRM_WEBHOOK_URL_LEPAS, CRM_API_KEY_LEPAS, CRM_API_SECRET_LEPAS.
  */
@@ -11,19 +11,4 @@ export const salesPartner = {
   site: "lepasbrasov.ro",
   vehicleUsedStatus: "NOU",
   vehicleType: "AUTOTURISM",
-  /** Dealer location code of LEPAS Brașov (Dip Motors) in lepas-ims. */
-  dealerWorkPlaceCode: "D-0007-01",
-  /**
-   * "Intention to buy", from the visitor's answer to "When would you like to come?".
-   * `default` is used when there is no answer (contact form, or the question was skipped) and is the
-   * value already accepted by the CRM for the Meta lead forms; if the CRM rejects another value,
-   * the lead is sent again with `default`.
-   */
-  intentionToBuy: {
-    asap: "1M",
-    week: "1M",
-    month: "1M",
-    research: "6M",
-    default: "3M",
-  } satisfies Record<Timeframe | "default", string>,
 };

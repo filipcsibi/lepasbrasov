@@ -22,7 +22,7 @@ function splitName(full: string) {
   return { first_name: first, name: rest.length > 0 ? rest.join(" ") : first };
 }
 
-/** Everything the CRM has no field for goes in the comment, so the consultant sees it. */
+/** Everything the DMS has no field for goes in the comment, so the consultant sees it. */
 function buildComment(lead: Lead) {
   const model = leadModels.find((m) => m.slug === lead.model);
   const parts = [sourceLabels[lead.source]];
@@ -38,7 +38,7 @@ function buildComment(lead: Lead) {
   return parts.join(" | ");
 }
 
-function buildPayload(lead: Lead, intentionToBuy: string) {
+function buildPayload(lead: Lead) {
   return {
     email: lead.email,
     phone: lead.phone,
@@ -50,8 +50,6 @@ function buildPayload(lead: Lead, intentionToBuy: string) {
     comment: buildComment(lead),
     site: salesPartner.site,
     vehicle_type: salesPartner.vehicleType,
-    intention_to_buy: intentionToBuy,
-    dealer_work_place_code: salesPartner.dealerWorkPlaceCode,
   };
 }
 
@@ -67,21 +65,8 @@ async function post(payload: object, { url, apiKey, apiSecret }: Credentials) {
   return { ok: false as const, status: response.status, message: String(body?.message ?? "") };
 }
 
-/** Creates the lead in SalesPartner. Throws when the CRM does not accept it. */
+/** Creates the lead in the dealer's SalesPartner DMS. Throws when the DMS does not accept it. */
 export async function sendToSalesPartner(lead: Lead, credentials: Credentials) {
-  const { intentionToBuy } = salesPartner;
-  const intention = lead.timeframe ? intentionToBuy[lead.timeframe] : intentionToBuy.default;
-
-  let result = await post(buildPayload(lead, intention), credentials);
-  // A validation error on a mapped value must not cost the lead: send it again with the known-good default.
-  if (
-    !result.ok &&
-    result.status === 400 &&
-    intention !== intentionToBuy.default &&
-    /intention/i.test(result.message)
-  ) {
-    console.warn(`[leads] SalesPartner rejected intention_to_buy "${intention}": ${result.message}`);
-    result = await post(buildPayload(lead, intentionToBuy.default), credentials);
-  }
+  const result = await post(buildPayload(lead), credentials);
   if (!result.ok) throw new Error(`SalesPartner responded ${result.status}: ${result.message}`);
 }

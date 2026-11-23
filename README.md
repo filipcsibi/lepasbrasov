@@ -99,20 +99,22 @@ in the form); `/test-drive?model=lepas-l6-bev` opens it with that model already 
 
 When the launch offer ends, set `price.launch` to `null` in `config.ts` — the page then shows only the list price.
 
-**Where leads go** — set in Vercel → Settings → Environment Variables. Leads go **only** to SalesPartner; without
-these variables, production shows the visitor an error instead of silently losing the lead (locally the lead is printed in the terminal).
+**Where leads go** — set in Vercel → Settings → Environment Variables. Leads go **only** to the Dip Motors LEPAS DMS
+(the dealer's own SalesPartner instance), directly — not through the importer's lepas-ims. Without these variables,
+production shows the visitor an error instead of silently losing the lead (locally the lead is printed in the
+terminal).
 
-| Variable                | Purpose                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------- |
-| `CRM_WEBHOOK_URL_LEPAS` | SalesPartner lead endpoint (lepas-ims) — the lead is created directly in the CRM |
-| `CRM_API_KEY_LEPAS`     | SalesPartner API key (sent as `X-API-Key`)                                       |
-| `CRM_API_SECRET_LEPAS`  | SalesPartner API secret (sent as `X-API-Secret`)                                 |
+| Variable                | Purpose                                                               |
+| ----------------------- | --------------------------------------------------------------------- |
+| `CRM_WEBHOOK_URL_LEPAS` | `https://dip-motors.cloud40.salespartner.app/api/public/collect-lead` |
+| `CRM_API_KEY_LEPAS`     | API key generated in the DMS (sent as `X-API-Key`)                    |
+| `CRM_API_SECRET_LEPAS`  | API secret generated in the DMS (sent as `X-API-Secret`)              |
 
 These are read only on the server (none starts with `NEXT_PUBLIC_`), so they never reach the browser.
 
 Both forms — test drive / offer and the contact form on `/contact` — go through `src/features/leads`. The fixed
-values sent to SalesPartner (channel, site, dealer code, vehicle status and the "intention to buy" mapped from
-"When would you like to come?") are in `src/features/leads/crm.ts`.
+values sent to the DMS (brand, channel, site, vehicle status and type) are in `src/features/leads/crm.ts`. The DMS
+takes no dealer code and no "intention to buy"; the answer to "When would you like to come?" is in the lead's comment.
 
 **Spam protection:** a hidden honeypot field, a minimum fill time, at most 5 requests per address in 10 minutes and
 no second delivery for the same phone number within 10 minutes. For a real attack, add a rate-limit rule for the form
