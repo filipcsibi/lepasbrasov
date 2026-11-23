@@ -66,11 +66,11 @@
     "lepasL8": {
       "meta": {
         "title": "Test drive the LEPAS L8 in Brașov – book online",
-        "description": "Drive the new LEPAS L8: a 278 hp plug-in hybrid SUV with up to 1,040 km combined range. Free test drive at the LEPAS Brașov showroom. From €42,500 incl. VAT."
+        "description": "Drive the new LEPAS L8: a 279 hp plug-in hybrid SUV with up to 1,040 km combined range. Free test drive at the LEPAS Brașov showroom. From €42,500 incl. VAT."
       },
       "eyebrow": "Official launch in Romania · Brașov showroom",
       "title": "Book a test drive in the new LEPAS L8",
-      "subtitle": "A 278 hp plug-in hybrid SUV with up to 1,040 km combined range. Come and drive it in Brașov.",
+      "subtitle": "A 279 hp plug-in hybrid SUV with up to 1,040 km combined range. Come and drive it in Brașov.",
       "cta": "Book a test drive",
       "form": {
         "title": "Book your test drive",
@@ -80,7 +80,7 @@
       "trust": ["Free, with no obligation", "We call you to book it", "You pick the day and time"],
       "stats": [
         {
-          "value": "278 hp",
+          "value": "279 hp",
           "label": "total power"
         },
         {

@@ -67,7 +67,39 @@
   margin-top: 0.34rem;
 }
 
-.introActions > a:last-child {
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.08rem 0.16rem;
+  margin-top: 0.26rem;
+}
+
+.priceLabel {
+  font-size: var(--font-size-2);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.price strong {
+  font-size: 0.5rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.price s {
+  font-size: var(--font-size-5);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.priceNote {
+  font-size: var(--font-size-3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.introActions > a {
   height: 0.62rem;
 }
 
@@ -92,7 +124,7 @@
   }
 
   .intro {
-    padding: 2.4rem var(--page-gutter) 0.7rem;
+    padding: 2.4rem var(--page-gutter) 1.4rem;
   }
 
   .eyebrow {
@@ -112,7 +144,24 @@
     align-items: flex-start;
   }
 
-  .introActions > a:last-child {
+  .introActions > a {
     height: 0.88rem;
+  }
+
+  .priceLabel {
+    width: 100%;
+    font-size: 0.22rem;
+  }
+
+  .price strong {
+    font-size: 0.62rem;
+  }
+
+  .price s {
+    font-size: 0.3rem;
+  }
+
+  .priceNote {
+    font-size: 0.26rem;
   }
 }

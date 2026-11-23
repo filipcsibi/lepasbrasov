@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { siteConfig } from "@/config/site";
 import { panel } from "@/shared/ui/switchgear";
-import { useLenis } from "@/shared/providers/SmoothScrollProvider";
 import { BurgerIcon, HomeIcon, PhoneIcon } from "./icons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { MenuPanel } from "./MenuPanel";
@@ -20,7 +19,6 @@ import styles from "./Header.module.css";
 export function Header() {
   const t = useTranslations("common.nav");
   const pathname = usePathname();
-  const lenis = useLenis();
   const [open, setOpen] = useState(false);
   const [compact, setCompact] = useState(false);
 
@@ -38,10 +36,8 @@ export function Header() {
   }, [pathname]);
 
   useEffect(() => {
-    if (open) lenis?.stop();
-    else lenis?.start();
     document.documentElement.style.overflow = open ? "hidden" : "";
-  }, [open, lenis]);
+  }, [open]);
 
   return (
     <>

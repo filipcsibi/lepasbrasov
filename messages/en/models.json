@@ -17,15 +17,27 @@
   "lepasL8": {
     "meta": {
       "title": "LEPAS L8",
-      "description": "LEPAS L8 – the Super Hybrid SUV with “Leopard Aesthetics” design, a combined range of over 1,200 km and an interior crafted as an elegant third space."
+      "description": "LEPAS L8 – the Super Hybrid SUV with “Leopard Aesthetics” design, a combined range of up to 1,040 km (WLTP) and an interior crafted as an elegant third space."
     },
     "name": "LEPAS L8",
+    "eyebrow": "Commanding presence",
+    "subtitle": "A premium plug-in hybrid SUV with up to 90 km of electric range (WLTP). The LEPAS L8 brings together stage presence, intelligent systems and a refined driving experience.",
+    "price": {
+      "label": "Launch price · first 100 customers",
+      "note": "incl. VAT"
+    },
+    "actions": {
+      "offer": "Request an offer",
+      "testDrive": "Book a test drive",
+      "equipment": "Equipment"
+    },
     "intro": "The Vehicle Designed To\nElevate Life's Quality",
     "labels": {
       "appearance": "Appearance",
       "luxuriousSpace": "Luxurious Space",
       "power": "Power",
-      "elegantDriving": "Elegant Driving"
+      "elegantDriving": "Elegant Driving",
+      "specSheet": "Specifications"
     },
     "specs": {
       "length": "Length",
@@ -78,6 +90,266 @@
     },
     "gallery": {
       "title": "Leopard Aesthetics"
+    },
+    "specSheet": {
+      "title": "Specifications and equipment",
+      "intro": "Figures come from the official EU configuration sheet (WVTA type approval). Pick a version to see its equipment.",
+      "versionsLabel": "Version",
+      "onlyBadge": "Elegance only",
+      "specs": [
+        {
+          "title": "Powertrain and performance",
+          "rows": [
+            {
+              "label": "Maximum combined power",
+              "value": "279 hp (205 kW)"
+            },
+            {
+              "label": "Maximum combined torque",
+              "value": "365 Nm"
+            },
+            {
+              "label": "Acceleration 0–100 km/h",
+              "value": "7.9 s"
+            },
+            {
+              "label": "Top speed",
+              "value": "179 km/h"
+            },
+            {
+              "label": "WLTP combined fuel consumption",
+              "value": "2.2 l/100 km"
+            },
+            {
+              "label": "Electricity consumption",
+              "value": "21.3 kWh/100 km"
+            },
+            {
+              "label": "WLTP CO₂ emissions",
+              "value": "53 g/km"
+            },
+            {
+              "label": "Consumption with a depleted battery",
+              "value": "6.0 l/100 km"
+            },
+            {
+              "label": "Fuel tank",
+              "value": "60 l"
+            }
+          ]
+        },
+        {
+          "title": "Battery and charging",
+          "rows": [
+            {
+              "label": "Battery",
+              "value": "18.4 kWh (LFP)"
+            },
+            {
+              "label": "WLTP electric range",
+              "value": "90 km combined · 123 km urban"
+            },
+            {
+              "label": "WLTP combined range",
+              "value": "1,040 km"
+            },
+            {
+              "label": "AC charging",
+              "value": "6.6 kW · 10–100% in up to 3.3 h"
+            },
+            {
+              "label": "DC charging",
+              "value": "40 kW · 30–80% in up to 20 min · 10–80% in up to 25 min"
+            },
+            {
+              "label": "V2L (powering external devices)",
+              "value": "2.2 kW interior · 6.6 kW exterior"
+            }
+          ]
+        },
+        {
+          "title": "Dimensions and capacities",
+          "rows": [
+            {
+              "label": "Length × width × height",
+              "value": "4,688 × 1,871 × 1,686 mm"
+            },
+            {
+              "label": "Wheelbase",
+              "value": "2,800 mm"
+            },
+            {
+              "label": "Seats",
+              "value": "5"
+            },
+            {
+              "label": "Boot space",
+              "value": "507 l · 1,314 l with the rear seat folded"
+            },
+            {
+              "label": "Towing capacity",
+              "value": "750 kg unbraked · 1,500 kg braked"
+            },
+            {
+              "label": "Wading depth",
+              "value": "600 mm"
+            },
+            {
+              "label": "Braking distance 100–0 km/h",
+              "value": "up to 36 m"
+            },
+            {
+              "label": "Wheels",
+              "essence": "19\"",
+              "elegance": "20\""
+            },
+            {
+              "label": "Exterior colours",
+              "value": "Emerald Green, Amethyst Violet, Pearl White, Obsidian Black, Silver Grey"
+            },
+            {
+              "label": "Warranty",
+              "value": "7 years / 150,000 km"
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "title": "Safety",
+          "items": [
+            {
+              "essence": "8 airbags: front, front side, curtain, driver knee, driver far-side",
+              "elegance": "10 airbags, including driver knee, far-side and rear side"
+            },
+            {
+              "text": "Adaptive cruise control (ACC)"
+            },
+            {
+              "text": "Forward collision warning (FCW)"
+            },
+            {
+              "text": "Lane departure warning and prevention, Emergency Lane Keeping"
+            },
+            {
+              "text": "Blind spot detection (BSD) and Rear Cross Traffic Alert"
+            },
+            {
+              "text": "Traffic Jam Assist (TJA) and intelligent speed limiter"
+            },
+            {
+              "text": "Direct tyre pressure monitoring (TPMS), electric parking brake, AUTO HOLD"
+            }
+          ]
+        },
+        {
+          "title": "Parking",
+          "items": [
+            {
+              "text": "540° camera"
+            },
+            {
+              "essence": "4 front and 4 rear sensors",
+              "elegance": "6 front and 6 rear sensors"
+            },
+            {
+              "text": "Automatic (APA) and remote (RPA) parking",
+              "only": "elegance"
+            }
+          ]
+        },
+        {
+          "title": "Lighting",
+          "items": [
+            {
+              "text": "Automatic LED headlights, LED daytime running lights, LED tail lights"
+            },
+            {
+              "text": "Ambient lighting in the second row"
+            },
+            {
+              "text": "Multicolour ambient lighting and welcome lights in the sills",
+              "only": "elegance"
+            }
+          ]
+        },
+        {
+          "title": "Comfort",
+          "items": [
+            {
+              "text": "Dual-zone automatic climate control with PM0.3 filtration"
+            },
+            {
+              "text": "Keyless entry and start (PEPS)"
+            },
+            {
+              "text": "Heated exterior mirrors"
+            },
+            {
+              "text": "Acoustic glass (windscreen and front doors), tinted rear windows"
+            },
+            {
+              "text": "Roof rails"
+            },
+            {
+              "essence": "Fabric and leather upholstery",
+              "elegance": "Eco-leather upholstery"
+            },
+            {
+              "essence": "Graphite black interior",
+              "elegance": "Graphite black or caramel brown interior"
+            },
+            {
+              "text": "Both front seats heated, ventilated and with massage",
+              "only": "elegance"
+            },
+            {
+              "text": "Driver seat: 6-way power adjustment, power lumbar, memory",
+              "only": "elegance"
+            },
+            {
+              "text": "Passenger seat: 6-way power adjustment",
+              "only": "elegance"
+            },
+            {
+              "text": "Negative-ion purification and air quality system (AQS)",
+              "only": "elegance"
+            },
+            {
+              "text": "Power tailgate and panoramic roof",
+              "only": "elegance"
+            }
+          ]
+        },
+        {
+          "title": "Technology and audio",
+          "items": [
+            {
+              "text": "13.2\" HD vertical central screen and 10.25\" instrument display"
+            },
+            {
+              "text": "Voice control, phone mirroring, wireless charging"
+            },
+            {
+              "text": "Over-the-air software updates (FOTA)"
+            },
+            {
+              "essence": "6 speakers",
+              "elegance": "8 speakers and active noise cancellation (ENC)"
+            },
+            {
+              "text": "Continental tyres",
+              "only": "elegance"
+            }
+          ]
+        }
+      ],
+      "footnote": "Fuel consumption, energy consumption and CO₂ emissions are measured under WLTP and may vary in real-world use. Equipment may differ by market and type approval; confirm the final list with your dealer.",
+      "back": "Back to LEPAS L8"
+    },
+    "metaEquipment": {
+      "title": "LEPAS L8 – Specifications and equipment",
+      "description": "LEPAS L8 specifications: powertrain, range, charging, dimensions and the equipment of the Essence and Elegance versions."
     }
   },
   "lepasL6Phev": {
@@ -88,15 +360,21 @@
     "name": "LEPAS L6 PHEV",
     "eyebrow": "Plug-in hybrid",
     "subtitle": "Electric in the city, carefree on long trips. 279 hp, up to 92 km on the battery alone and 1,058 km combined range (WLTP).",
+    "price": {
+      "label": "Launch price",
+      "note": "incl. VAT · with a €1,000 deposit, until 30 November"
+    },
     "actions": {
       "offer": "Request an offer",
-      "otherVariant": "See the L6 BEV"
+      "otherVariant": "See the L6 BEV",
+      "equipment": "Equipment"
     },
     "labels": {
       "power": "Powertrain",
       "exterior": "Exterior",
       "interior": "Interior",
-      "experience": "Experience"
+      "experience": "Experience",
+      "specSheet": "Specifications"
     },
     "exterior": {
       "title": "Define your aesthetic"
@@ -150,6 +428,181 @@
     "cta": {
       "title": "Start your LEPAS L6 PHEV experience",
       "text": "Request an offer and a LEPAS Brașov consultant will call you with all the details: versions, price, financing and delivery."
+    },
+    "specSheet": {
+      "title": "Specifications and equipment",
+      "intro": "Figures come from the official EU configuration sheet (WVTA type approval). The list covers standard equipment; confirm the final specification with your dealer.",
+      "versionsLabel": "Version",
+      "versionless": true,
+      "back": "Back to LEPAS L6 PHEV",
+      "specs": [
+        {
+          "title": "Powertrain and performance",
+          "rows": [
+            {
+              "label": "Maximum combined power",
+              "value": "279 hp (205 kW)"
+            },
+            {
+              "label": "Maximum combined torque",
+              "value": "365 Nm"
+            },
+            {
+              "label": "Acceleration 0–100 km/h",
+              "value": "7.9 s"
+            },
+            {
+              "label": "Top speed",
+              "value": "179 km/h"
+            },
+            {
+              "label": "WLTP combined fuel consumption",
+              "value": "2.2 l/100 km"
+            },
+            {
+              "label": "Electricity consumption",
+              "value": "14.8 kWh/100 km"
+            },
+            {
+              "label": "WLTP CO₂ emissions",
+              "value": "49 g/km"
+            },
+            {
+              "label": "Consumption with a depleted battery",
+              "value": "5.9 l/100 km"
+            },
+            {
+              "label": "Fuel tank",
+              "value": "60 l"
+            }
+          ]
+        },
+        {
+          "title": "Battery and charging",
+          "rows": [
+            {
+              "label": "Battery",
+              "value": "18.4 kWh (LFP)"
+            },
+            {
+              "label": "WLTP electric range",
+              "value": "92 km combined · 125 km urban"
+            },
+            {
+              "label": "WLTP combined range",
+              "value": "1,058 km"
+            },
+            {
+              "label": "AC charging",
+              "value": "6.6 kW · 10–100% in up to 3.3 h"
+            },
+            {
+              "label": "DC charging",
+              "value": "40 kW · 30–80% in up to 20 min · 10–80% in up to 25 min"
+            }
+          ]
+        },
+        {
+          "title": "Dimensions and capacities",
+          "rows": [
+            {
+              "label": "Length × width × height",
+              "value": "4,554 × 1,852 × 1,675 mm"
+            },
+            {
+              "label": "Wheelbase",
+              "value": "2,700 mm"
+            },
+            {
+              "label": "Boot space",
+              "value": "435 l · 1,255 l with the rear seat folded"
+            },
+            {
+              "label": "Braking distance 100–0 km/h",
+              "value": "up to 36 m"
+            },
+            {
+              "label": "Wheels",
+              "value": "19\""
+            },
+            {
+              "label": "Exterior colours",
+              "value": "Solar Orange, Bamboo Green, Obsidian Black, Champagne Gold, Metallic Silver, Pearl White"
+            },
+            {
+              "label": "Warranty",
+              "value": "7 years / 150,000 km"
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "title": "Safety",
+          "items": [
+            {
+              "text": "7 airbags: front, front side, curtain, far-side"
+            },
+            {
+              "text": "Adaptive cruise control (ACC)"
+            },
+            {
+              "text": "Forward collision warning (FCW)"
+            },
+            {
+              "text": "Lane departure warning and prevention, Emergency Lane Keeping"
+            },
+            {
+              "text": "Blind spot detection (BSD) and Rear Cross Traffic Alert"
+            },
+            {
+              "text": "Traffic Jam Assist (TJA) and intelligent speed limiter"
+            },
+            {
+              "text": "Direct tyre pressure monitoring (TPMS)"
+            }
+          ]
+        },
+        {
+          "title": "Comfort",
+          "items": [
+            {
+              "text": "Heated steering wheel"
+            },
+            {
+              "text": "Dual-zone automatic climate control"
+            },
+            {
+              "text": "Keyless entry and start (PEPS)"
+            },
+            {
+              "text": "Tinted rear windows"
+            },
+            {
+              "text": "LED headlights and tail lights"
+            }
+          ]
+        },
+        {
+          "title": "Technology",
+          "items": [
+            {
+              "text": "13.2\" central screen and 8.8\" instrument display"
+            },
+            {
+              "text": "Voice control and phone mirroring"
+            },
+            {
+              "text": "Over-the-air software updates (FOTA)"
+            }
+          ]
+        }
+      ],
+      "footnote": "Fuel consumption, energy consumption and CO₂ emissions are measured under WLTP and may vary in real-world use. Equipment may differ by version, market and type approval; confirm the final list with your dealer."
+    },
+    "metaEquipment": {
+      "title": "LEPAS L6 PHEV – Specifications and equipment",
+      "description": "LEPAS L6 PHEV specifications: powertrain, range, charging, dimensions and standard equipment."
     }
   },
   "lepasL6Bev": {

@@ -3,13 +3,11 @@
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
-import { useLenis } from "@/shared/providers/SmoothScrollProvider";
 import { panel } from "@/shared/ui/switchgear";
 import styles from "./ScrollToTop.module.css";
 
 export function ScrollToTop() {
   const t = useTranslations("common.actions");
-  const lenis = useLenis();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -20,8 +18,7 @@ export function ScrollToTop() {
   }, []);
 
   const toTop = () => {
-    if (lenis) lenis.scrollTo(0, { duration: 1.2 });
-    else window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 });
   };
 
   return (

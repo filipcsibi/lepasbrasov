@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "next-intl";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
@@ -9,13 +10,15 @@ import { KeyButton } from "@/shared/ui/switchgear";
 import { ResponsiveImage } from "@/shared/ui/media";
 import { SliderDots } from "@/shared/ui/slider-dots";
 import { useIsMobile } from "@/shared/hooks/useMediaQuery";
-import { useModelText } from "../../lib/model-context";
+import { useModel, useModelText } from "../../lib/model-context";
 import type { HeroSection } from "../../types";
 import { VariantSwitch } from "../shared/VariantSwitch";
 import styles from "./ModelHero.module.css";
 
 export function ModelHero({ section }: { section: HeroSection }) {
   const t = useModelText();
+  const locale = useLocale();
+  const { accent } = useModel();
   const swiperRef = useRef<SwiperType | null>(null);
   const dotsRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
@@ -24,6 +27,11 @@ export function ModelHero({ section }: { section: HeroSection }) {
   const portrait = section.slides.filter((s) => s.mobileSrc);
   const slides = isMobile && portrait.length > 0 ? portrait : section.slides;
   const many = slides.length > 1;
+  // "42.500 €" in Romanian, "€42,500" in English (the currency style would print "EUR" in Romanian).
+  const euro = (amount: number) => {
+    const n = new Intl.NumberFormat(locale).format(amount);
+    return locale === "ro" ? `${n} €` : `€${n}`;
+  };
 
   return (
     <section className={styles.hero}>
@@ -34,7 +42,6 @@ export function ModelHero({ section }: { section: HeroSection }) {
         effect="fade"
         speed={1200}
         loop={many}
-        autoplay={many ? { delay: 4000, disableOnInteraction: false } : false}
         onSwiper={(s) => (swiperRef.current = s)}
         onRealIndexChange={(s) => setActive(s.realIndex)}
         onAutoplayTimeLeft={(_s, _t, p) => dotsRef.current?.style.setProperty("--progress", String(1 - p))}
@@ -59,9 +66,26 @@ export function ModelHero({ section }: { section: HeroSection }) {
           {section.eyebrowKey && <p className={styles.eyebrow}>{t(section.eyebrowKey)}</p>}
           {section.titleKey && <h1 className={styles.introTitle}>{t(section.titleKey)}</h1>}
           <p className={styles.subtitle}>{t(section.subtitleKey)}</p>
+          {section.price && (
+            <p className={styles.price}>
+              <span className={styles.priceLabel}>{t(section.price.labelKey)}</span>
+              <strong>{euro(section.price.amount)}</strong>
+              {section.price.oldAmount && <s>{euro(section.price.oldAmount)}</s>}
+              <span className={styles.priceNote}>{t(section.price.noteKey)}</span>
+            </p>
+          )}
           <div className={styles.introActions}>
             <VariantSwitch />
-            {section.action && <KeyButton href={section.action.href}>{t(section.action.labelKey)}</KeyButton>}
+            {section.action && (
+              <KeyButton href={section.action.href} tint={accent ?? "var(--color-panther-orange)"}>
+                {t(section.action.labelKey)}
+              </KeyButton>
+            )}
+            {section.secondaryActions?.map((action) => (
+              <KeyButton key={action.labelKey} href={action.href}>
+                {t(action.labelKey)}
+              </KeyButton>
+            ))}
           </div>
         </div>
       ) : (

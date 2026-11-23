@@ -31,6 +31,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages.map((p) => entry(p as Href)),
     ...models.map((m) => entry({ pathname: "/models/[slug]", params: { slug: m.slug } })),
+    ...models
+      .filter((m) => m.specSheet)
+      .map((m) => entry({ pathname: "/models/[slug]/equipment", params: { slug: m.slug } })),
     ...testDriveLandings.map((l) => entry({ pathname: "/test-drive/[model]", params: { model: l.slug } })),
   ];
 }

@@ -7,7 +7,6 @@ import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/config/site";
 import { MarketingScripts } from "@/features/analytics";
 import { CookieConsent } from "@/features/cookie-consent";
-import { SmoothScrollProvider } from "@/shared/providers/SmoothScrollProvider";
 import "swiper/css";
 import "@/shared/styles/globals.css";
 
@@ -46,11 +45,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
     <html lang={locale} className={sourceSans.variable}>
       <body>
         <NextIntlClientProvider>
-          <SmoothScrollProvider>
-            {children}
-            <CookieConsent />
-            <MarketingScripts />
-          </SmoothScrollProvider>
+          {children}
+          <CookieConsent />
+          <MarketingScripts />
         </NextIntlClientProvider>
       </body>
     </html>

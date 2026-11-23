@@ -1,5 +1,9 @@
+import { getLanding } from "@/features/test-drive/config";
 import type { ModelDefinition } from "../types";
 import { l6, l6Colors, l6Comfort, l6Gallery, l6Interior } from "./lepas-l6-shared";
+
+/** Launch offer: the same prices as the pre-order landing page. */
+const { list, launch } = getLanding("lepas-l6-phev")!.price;
 
 /**
  * LEPAS L6 PHEV (plug-in hybrid).
@@ -12,6 +16,12 @@ export const lepasL6Phev: ModelDefinition = {
   background: "#0b0c10",
   accent: "#eb9201",
   variant: "phev",
+  specSheet: {
+    contentKey: "specSheet",
+    actions: [
+      { labelKey: "actions.offer", href: { pathname: "/test-drive/[model]", params: { model: "lepas-l6-phev" } } },
+    ],
+  },
   sections: [
     {
       type: "hero",
@@ -19,10 +29,22 @@ export const lepasL6Phev: ModelDefinition = {
       eyebrowKey: "eyebrow",
       titleKey: "name",
       subtitleKey: "subtitle",
+      price: {
+        amount: launch ?? list,
+        oldAmount: launch ? list : undefined,
+        labelKey: "price.label",
+        noteKey: "price.note",
+      },
       action: {
         labelKey: "actions.offer",
         href: { pathname: "/test-drive/[model]", params: { model: "lepas-l6-phev" } },
       },
+      secondaryActions: [
+        {
+          labelKey: "actions.equipment",
+          href: { pathname: "/models/[slug]/equipment", params: { slug: "lepas-l6-phev" } },
+        },
+      ],
     },
     {
       type: "powertrain",
@@ -56,7 +78,6 @@ export const lepasL6Phev: ModelDefinition = {
     l6Interior,
     l6Comfort,
     { type: "rangeMap", modes: ["l6-phev-electric", "l6-phev-total"] },
-    { type: "advisor" },
     l6Gallery,
     {
       type: "cta",

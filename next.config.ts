@@ -8,6 +8,8 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     qualities: [75, 85],
   },
+  // Old Romanian URL of the model pages.
+  redirects: async () => [{ source: "/modele/:slug", destination: "/models/:slug", permanent: true }],
 };
 
 export default withNextIntl(nextConfig);

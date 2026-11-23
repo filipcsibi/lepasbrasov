@@ -67,8 +67,8 @@ transfer included in the Vercel plan (10 GB a month on Hobby, against 100 GB for
 
 | Page          | URL                     | Data                                        | Texts (`messages/*/models.json`) |
 | ------------- | ----------------------- | ------------------------------------------- | -------------------------------- |
-| LEPAS L6 PHEV | `/modele/lepas-l6-phev` | `src/features/models/data/lepas-l6-phev.ts` | `lepasL6Phev`                    |
-| LEPAS L6 BEV  | `/modele/lepas-l6-bev`  | `src/features/models/data/lepas-l6-bev.ts`  | `lepasL6Bev`                     |
+| LEPAS L6 PHEV | `/models/lepas-l6-phev` | `src/features/models/data/lepas-l6-phev.ts` | `lepasL6Phev`                    |
+| LEPAS L6 BEV  | `/models/lepas-l6-bev`  | `src/features/models/data/lepas-l6-bev.ts`  | `lepasL6Bev`                     |
 
 Photos, colours and the interior sections shared by both are in `data/lepas-l6-shared.ts`.
 
@@ -129,7 +129,8 @@ Each lead carries the model, when they want to come, trade-in interest, the page
 | Page                      | Romanian (default)                                           | English                                                    |
 | ------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
 | Home                      | `/`                                                          | `/en`                                                      |
-| Model                     | `/modele/lepas-l8`                                           | `/en/models/lepas-l8`                                      |
+| Model                     | `/models/lepas-l8`                                           | `/en/models/lepas-l8`                                      |
+| Model equipment           | `/models/lepas-l8/dotari`                                    | `/en/models/lepas-l8/equipment`                            |
 | Brand introduction        | `/despre/introducere`                                        | `/en/about/introduction`                                   |
 | Brand values              | `/despre/valorile-brandului`                                 | `/en/about/brand-values`                                   |
 | Legal / privacy / cookies | `/termeni-legali`, `/confidentialitate`, `/politica-cookies` | `/en/legal`, `/en/privacy-statement`, `/en/cookies-policy` |
@@ -152,10 +153,9 @@ src/
   shared/
     ui/switchgear/      panel, KeyButton, KeyIconButton, KeyTabs, keycap
     ui/media/             ResponsiveImage (art-directed next/image), ResponsiveVideo
-    ui/motion/            PinOnScroll (GSAP ScrollTrigger), Reveal (plain wrapper: text is not animated in)
+    ui/motion/            PinOnScroll and Reveal (plain wrappers: sections are not pinned, text is not animated in)
     ui/slider-dots/ ui/markdown/ ui/scroll-to-top/
     lib/                  gsap setup, SEO helpers, Markdown/image helpers
-    providers/            Lenis smooth scroll (synced with ScrollTrigger)
     styles/globals.css    brand tokens (colours from the 2025 brand guide), rem scale, reset
   config/                 site + navigation config
   i18n/                   next-intl routing / request / navigation
@@ -178,5 +178,5 @@ The site accent is `--color-accent` (the logo's orange, as a backlight) in `glob
 **Before going live:** add the dealer's social
 accounts in `src/config/site.ts`, and confirm the road distances in `src/features/range-map/config.ts`.
 
-**Stack:** Next.js 16 (App Router, Turbopack), React 19, next-intl 4, GSAP 3 + ScrollTrigger, Lenis, Swiper 14,
+**Stack:** Next.js 16 (App Router, Turbopack), React 19, next-intl 4, GSAP 3 + ScrollTrigger, Swiper 14,
 CSS Modules, Source Sans 3 (the Latin companion of the brand font Source Han Sans, with Romanian diacritics).

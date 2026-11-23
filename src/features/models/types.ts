@@ -42,6 +42,10 @@ export type HeroSection = {
   /** One or two sentences under the title. */
   subtitleKey?: string;
   action?: SectionAction;
+  /** Further buttons next to `action`, shown as outlined buttons. */
+  secondaryActions?: SectionAction[];
+  /** Price block under the subtitle (EUR, VAT included). */
+  price?: { amount: number; oldAmount?: number; labelKey: string; noteKey: string };
   /** Where the car sits in the desktop photo (CSS `object-position`). */
   focus?: string;
 };
@@ -200,6 +204,8 @@ export type ModelDefinition = {
   accent?: string;
   /** Set on models sold with several drivetrains: shows the switch between their pages. */
   variant?: ModelVariant;
+  /** Equipment page of the model (`/models/<slug>/equipment`); content in `models.<model>.<contentKey>`. */
+  specSheet?: { contentKey: string; actions: SectionAction[] };
   sections: ModelSection[];
 };
 

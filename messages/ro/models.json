@@ -17,15 +17,27 @@
   "lepasL8": {
     "meta": {
       "title": "LEPAS L8",
-      "description": "LEPAS L8 – SUV-ul Super Hybrid cu design „Leopard Aesthetics”, autonomie combinată de peste 1.200 km și un interior conceput ca un al treilea spațiu elegant."
+      "description": "LEPAS L8 – SUV-ul Super Hybrid cu design „Leopard Aesthetics”, autonomie combinată de până la 1.040 km (WLTP) și un interior conceput ca un al treilea spațiu elegant."
     },
     "name": "LEPAS L8",
+    "eyebrow": "Prezență impunătoare",
+    "subtitle": "SUV premium plug-in hibrid cu până la 90 km autonomie electrică (WLTP). LEPAS L8 reunește prezență scenică, sisteme inteligente și o experiență de condus rafinată.",
+    "price": {
+      "label": "Preț de lansare · primii 100 de clienți",
+      "note": "cu TVA"
+    },
+    "actions": {
+      "offer": "Cere o ofertă",
+      "testDrive": "Programează un test drive",
+      "equipment": "Dotări"
+    },
     "intro": "Vehiculul conceput să\nînalțe calitatea vieții",
     "labels": {
       "appearance": "Design exterior",
       "luxuriousSpace": "Spațiu luxos",
       "power": "Motorizare",
-      "elegantDriving": "Condus elegant"
+      "elegantDriving": "Condus elegant",
+      "specSheet": "Fișă tehnică"
     },
     "specs": {
       "length": "Lungime",
@@ -78,6 +90,266 @@
     },
     "gallery": {
       "title": "Estetica Leopard"
+    },
+    "specSheet": {
+      "title": "Date tehnice și dotări",
+      "intro": "Valorile provin din fișa oficială de configurație UE (omologare WVTA). Alege versiunea ca să vezi dotările ei.",
+      "versionsLabel": "Versiune",
+      "onlyBadge": "Doar Elegance",
+      "specs": [
+        {
+          "title": "Motorizare și performanță",
+          "rows": [
+            {
+              "label": "Putere maximă combinată",
+              "value": "279 CP (205 kW)"
+            },
+            {
+              "label": "Cuplu maxim combinat",
+              "value": "365 Nm"
+            },
+            {
+              "label": "Accelerație 0–100 km/h",
+              "value": "7,9 s"
+            },
+            {
+              "label": "Viteză maximă",
+              "value": "179 km/h"
+            },
+            {
+              "label": "Consum combinat WLTP",
+              "value": "2,2 l/100 km"
+            },
+            {
+              "label": "Consum de energie electrică",
+              "value": "21,3 kWh/100 km"
+            },
+            {
+              "label": "Emisii CO₂ WLTP",
+              "value": "53 g/km"
+            },
+            {
+              "label": "Consum cu bateria descărcată",
+              "value": "6,0 l/100 km"
+            },
+            {
+              "label": "Rezervor",
+              "value": "60 l"
+            }
+          ]
+        },
+        {
+          "title": "Baterie și încărcare",
+          "rows": [
+            {
+              "label": "Baterie",
+              "value": "18,4 kWh (LFP)"
+            },
+            {
+              "label": "Autonomie electrică WLTP",
+              "value": "90 km combinat · 123 km urban"
+            },
+            {
+              "label": "Autonomie combinată WLTP",
+              "value": "1.040 km"
+            },
+            {
+              "label": "Încărcare AC",
+              "value": "6,6 kW · 10–100% în maximum 3,3 h"
+            },
+            {
+              "label": "Încărcare DC",
+              "value": "40 kW · 30–80% în maximum 20 min · 10–80% în maximum 25 min"
+            },
+            {
+              "label": "V2L (alimentare consumatori externi)",
+              "value": "2,2 kW interior · 6,6 kW exterior"
+            }
+          ]
+        },
+        {
+          "title": "Dimensiuni și capacități",
+          "rows": [
+            {
+              "label": "Lungime × lățime × înălțime",
+              "value": "4.688 × 1.871 × 1.686 mm"
+            },
+            {
+              "label": "Ampatament",
+              "value": "2.800 mm"
+            },
+            {
+              "label": "Număr de locuri",
+              "value": "5"
+            },
+            {
+              "label": "Portbagaj",
+              "value": "507 l · 1.314 l cu bancheta rabatată"
+            },
+            {
+              "label": "Capacitate de remorcare",
+              "value": "750 kg fără frână · 1.500 kg cu frână"
+            },
+            {
+              "label": "Adâncime de trecere prin apă",
+              "value": "600 mm"
+            },
+            {
+              "label": "Distanță de frânare 100–0 km/h",
+              "value": "maximum 36 m"
+            },
+            {
+              "label": "Jante",
+              "essence": "19\"",
+              "elegance": "20\""
+            },
+            {
+              "label": "Culori exterioare",
+              "value": "Verde Smarald, Violet Ametist, Alb Perlat, Negru Obsidian, Gri Argintiu"
+            },
+            {
+              "label": "Garanție",
+              "value": "7 ani / 150.000 km"
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "title": "Siguranță",
+          "items": [
+            {
+              "essence": "8 airbaguri: frontale, laterale față, cortină, genunchi șofer, far-side șofer",
+              "elegance": "10 airbaguri, inclusiv genunchi șofer, far-side și laterale spate"
+            },
+            {
+              "text": "Regulator adaptiv de viteză (ACC)"
+            },
+            {
+              "text": "Avertizare de coliziune frontală (FCW)"
+            },
+            {
+              "text": "Avertizare și prevenire la părăsirea benzii, Emergency Lane Keeping"
+            },
+            {
+              "text": "Monitorizare unghi mort (BSD) și Rear Cross Traffic Alert"
+            },
+            {
+              "text": "Asistent în ambuteiaj (TJA) și limitator inteligent de viteză"
+            },
+            {
+              "text": "Senzori direcți de presiune a anvelopelor (TPMS), frână de parcare electrică, AUTO HOLD"
+            }
+          ]
+        },
+        {
+          "title": "Parcare",
+          "items": [
+            {
+              "text": "Cameră 540°"
+            },
+            {
+              "essence": "4 senzori față și 4 spate",
+              "elegance": "6 senzori față și 6 spate"
+            },
+            {
+              "text": "Parcare automată (APA) și de la distanță (RPA)",
+              "only": "elegance"
+            }
+          ]
+        },
+        {
+          "title": "Lumini",
+          "items": [
+            {
+              "text": "Faruri LED automate, lumini de zi LED, stopuri LED"
+            },
+            {
+              "text": "Lumini ambientale în rândul 2"
+            },
+            {
+              "text": "Lumini ambientale multicolore și iluminare de bun venit în praguri",
+              "only": "elegance"
+            }
+          ]
+        },
+        {
+          "title": "Confort",
+          "items": [
+            {
+              "text": "Climatizare automată bizonă cu filtrare PM0.3"
+            },
+            {
+              "text": "Acces și pornire fără cheie (PEPS)"
+            },
+            {
+              "text": "Oglinzi exterioare încălzite"
+            },
+            {
+              "text": "Sticlă fonoabsorbantă (parbriz și uși față), geamuri spate fumurii"
+            },
+            {
+              "text": "Bare longitudinale pe plafon"
+            },
+            {
+              "essence": "Tapițerie din țesătură combinată cu piele",
+              "elegance": "Tapițerie din piele ecologică"
+            },
+            {
+              "essence": "Interior negru grafit",
+              "elegance": "Interior negru grafit sau maro caramel"
+            },
+            {
+              "text": "Ambele scaune față cu încălzire, ventilație și masaj",
+              "only": "elegance"
+            },
+            {
+              "text": "Scaun șofer: reglaj electric în 6 direcții, lombar electric, memorie",
+              "only": "elegance"
+            },
+            {
+              "text": "Scaun pasager: reglaj electric în 6 direcții",
+              "only": "elegance"
+            },
+            {
+              "text": "Purificare cu ioni negativi și sistem de calitate a aerului (AQS)",
+              "only": "elegance"
+            },
+            {
+              "text": "Hayon electric și plafon panoramic",
+              "only": "elegance"
+            }
+          ]
+        },
+        {
+          "title": "Tehnologie și audio",
+          "items": [
+            {
+              "text": "Ecran central vertical de 13,2\" HD și ecran de bord de 10,25\""
+            },
+            {
+              "text": "Comandă vocală, oglindirea telefonului, încărcare wireless"
+            },
+            {
+              "text": "Actualizări de software prin internet (FOTA)"
+            },
+            {
+              "essence": "6 difuzoare",
+              "elegance": "8 difuzoare și anulare activă a zgomotului (ENC)"
+            },
+            {
+              "text": "Anvelope Continental",
+              "only": "elegance"
+            }
+          ]
+        }
+      ],
+      "footnote": "Consumul de combustibil, consumul de energie și emisiile de CO₂ sunt măsurate conform WLTP și pot varia în utilizarea reală. Dotările pot diferi în funcție de piață și de omologare; confirmă lista finală la dealer.",
+      "back": "Înapoi la LEPAS L8"
+    },
+    "metaEquipment": {
+      "title": "LEPAS L8 – Date tehnice și dotări",
+      "description": "Fișa tehnică LEPAS L8: motorizare, autonomie, încărcare, dimensiuni și dotările versiunilor Essence și Elegance."
     }
   },
   "lepasL6Phev": {
@@ -88,15 +360,21 @@
     "name": "LEPAS L6 PHEV",
     "eyebrow": "Plug-in hybrid",
     "subtitle": "Electric în oraș, fără griji la drum lung. 279 CP, până la 92 km doar pe baterie și 1.058 km autonomie combinată (WLTP).",
+    "price": {
+      "label": "Preț de lansare",
+      "note": "cu TVA · cu un avans de 1.000 €, până pe 30 noiembrie"
+    },
     "actions": {
       "offer": "Cere oferta",
-      "otherVariant": "Vezi L6 BEV"
+      "otherVariant": "Vezi L6 BEV",
+      "equipment": "Dotări"
     },
     "labels": {
       "power": "Motorizare",
       "exterior": "Exterior",
       "interior": "Interior",
-      "experience": "Experiență"
+      "experience": "Experiență",
+      "specSheet": "Fișă tehnică"
     },
     "exterior": {
       "title": "Definește-ți estetica"
@@ -150,6 +428,181 @@
     "cta": {
       "title": "Începe experiența LEPAS L6 PHEV",
       "text": "Cere oferta și un consultant LEPAS Brașov te sună cu toate detaliile: versiuni, preț, finanțare și livrare."
+    },
+    "specSheet": {
+      "title": "Date tehnice și dotări",
+      "intro": "Valorile provin din fișa oficială de configurație UE (omologare WVTA). Lista cuprinde dotările standard; confirmă echiparea finală la dealer.",
+      "versionsLabel": "Versiune",
+      "versionless": true,
+      "back": "Înapoi la LEPAS L6 PHEV",
+      "specs": [
+        {
+          "title": "Motorizare și performanță",
+          "rows": [
+            {
+              "label": "Putere maximă combinată",
+              "value": "279 CP (205 kW)"
+            },
+            {
+              "label": "Cuplu maxim combinat",
+              "value": "365 Nm"
+            },
+            {
+              "label": "Accelerație 0–100 km/h",
+              "value": "7,9 s"
+            },
+            {
+              "label": "Viteză maximă",
+              "value": "179 km/h"
+            },
+            {
+              "label": "Consum combinat WLTP",
+              "value": "2,2 l/100 km"
+            },
+            {
+              "label": "Consum de energie electrică",
+              "value": "14,8 kWh/100 km"
+            },
+            {
+              "label": "Emisii CO₂ WLTP",
+              "value": "49 g/km"
+            },
+            {
+              "label": "Consum cu bateria descărcată",
+              "value": "5,9 l/100 km"
+            },
+            {
+              "label": "Rezervor",
+              "value": "60 l"
+            }
+          ]
+        },
+        {
+          "title": "Baterie și încărcare",
+          "rows": [
+            {
+              "label": "Baterie",
+              "value": "18,4 kWh (LFP)"
+            },
+            {
+              "label": "Autonomie electrică WLTP",
+              "value": "92 km combinat · 125 km urban"
+            },
+            {
+              "label": "Autonomie combinată WLTP",
+              "value": "1.058 km"
+            },
+            {
+              "label": "Încărcare AC",
+              "value": "6,6 kW · 10–100% în maximum 3,3 h"
+            },
+            {
+              "label": "Încărcare DC",
+              "value": "40 kW · 30–80% în maximum 20 min · 10–80% în maximum 25 min"
+            }
+          ]
+        },
+        {
+          "title": "Dimensiuni și capacități",
+          "rows": [
+            {
+              "label": "Lungime × lățime × înălțime",
+              "value": "4.554 × 1.852 × 1.675 mm"
+            },
+            {
+              "label": "Ampatament",
+              "value": "2.700 mm"
+            },
+            {
+              "label": "Portbagaj",
+              "value": "435 l · 1.255 l cu bancheta rabatată"
+            },
+            {
+              "label": "Distanță de frânare 100–0 km/h",
+              "value": "maximum 36 m"
+            },
+            {
+              "label": "Jante",
+              "value": "19\""
+            },
+            {
+              "label": "Culori exterioare",
+              "value": "Portocaliu solar, Verde bambus, Negru obsidian, Auriu șampanie, Argintiu metalic, Alb perlat"
+            },
+            {
+              "label": "Garanție",
+              "value": "7 ani / 150.000 km"
+            }
+          ]
+        }
+      ],
+      "equipment": [
+        {
+          "title": "Siguranță",
+          "items": [
+            {
+              "text": "7 airbaguri: frontale, laterale față, cortină, far-side"
+            },
+            {
+              "text": "Regulator adaptiv de viteză (ACC)"
+            },
+            {
+              "text": "Avertizare de coliziune frontală (FCW)"
+            },
+            {
+              "text": "Avertizare și prevenire la părăsirea benzii, Emergency Lane Keeping"
+            },
+            {
+              "text": "Monitorizare unghi mort (BSD) și Rear Cross Traffic Alert"
+            },
+            {
+              "text": "Asistent în ambuteiaj (TJA) și limitator inteligent de viteză"
+            },
+            {
+              "text": "Senzori direcți de presiune a anvelopelor (TPMS)"
+            }
+          ]
+        },
+        {
+          "title": "Confort",
+          "items": [
+            {
+              "text": "Volan încălzit"
+            },
+            {
+              "text": "Climatizare automată bizonă"
+            },
+            {
+              "text": "Acces și pornire fără cheie (PEPS)"
+            },
+            {
+              "text": "Geamuri spate fumurii"
+            },
+            {
+              "text": "Faruri și stopuri LED"
+            }
+          ]
+        },
+        {
+          "title": "Tehnologie",
+          "items": [
+            {
+              "text": "Ecran central de 13,2\" și ecran de bord de 8,8\""
+            },
+            {
+              "text": "Comandă vocală și oglindirea telefonului"
+            },
+            {
+              "text": "Actualizări de software prin internet (FOTA)"
+            }
+          ]
+        }
+      ],
+      "footnote": "Consumul de combustibil, consumul de energie și emisiile de CO₂ sunt măsurate conform WLTP și pot varia în utilizarea reală. Dotările pot diferi în funcție de versiune, piață și omologare; confirmă lista finală la dealer."
+    },
+    "metaEquipment": {
+      "title": "LEPAS L6 PHEV – Date tehnice și dotări",
+      "description": "Fișa tehnică LEPAS L6 PHEV: motorizare, autonomie, încărcare, dimensiuni și dotările standard."
     }
   },
   "lepasL6Bev": {

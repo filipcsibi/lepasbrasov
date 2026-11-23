@@ -1,0 +1,221 @@
+.section {
+  min-height: 100vh;
+  padding: 2.4rem var(--page-gutter) 1.1rem;
+  color: var(--color-white);
+  background:
+    radial-gradient(
+      55% 50% at 0% 0%,
+      color-mix(in srgb, var(--model-accent, var(--color-panther-orange)) 12%, transparent),
+      transparent 70%
+    ),
+    #0b0c10;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.back {
+  margin-bottom: 0.3rem;
+  font-size: var(--font-size-2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.actions > a {
+  height: 0.62rem;
+}
+
+.title {
+  margin-top: 0.34rem;
+  font-size: 0.56rem;
+  font-weight: 700;
+  line-height: 1.14;
+  text-wrap: balance;
+}
+
+.intro {
+  max-width: 7rem;
+  margin-top: 0.24rem;
+  font-size: var(--font-size-3);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tabs {
+  margin-top: 0.4rem;
+  width: 4.4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.card {
+  padding: 0.34rem 0.38rem 0.24rem;
+}
+
+.card h4,
+.card dl,
+.card ul {
+  position: relative;
+  z-index: 2;
+}
+
+.card h4 {
+  margin: 0 0 0.1rem;
+  font-size: var(--font-size-5);
+  font-weight: 600;
+  color: var(--model-accent, var(--color-panther-orange));
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.3rem;
+  padding: 0.13rem 0;
+  font-size: var(--font-size-2);
+  line-height: 1.45;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.row:last-child,
+.card li:last-child {
+  border-bottom: 0;
+}
+
+.row dt {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.row dd {
+  margin: 0;
+  max-width: 60%;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.92);
+  font-variant-numeric: tabular-nums;
+}
+
+.card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card li {
+  position: relative;
+  padding: 0.13rem 0 0.13rem 0.26rem;
+  font-size: var(--font-size-2);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.86);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.24rem;
+  width: 0.12rem;
+  height: 0.02rem;
+  background: var(--model-accent, var(--color-panther-orange));
+}
+
+.badge {
+  margin-left: 0.12rem;
+  padding: 0.01rem 0.08rem;
+  font-size: 0.12rem;
+  white-space: nowrap;
+  color: var(--model-accent, var(--color-panther-orange));
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+}
+
+.footnote {
+  margin-top: 0.3rem;
+  font-size: 0.14rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 2rem var(--page-gutter) 0.9rem;
+  }
+
+  .back {
+    font-size: 0.24rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.16rem;
+  }
+
+  .actions > a {
+    height: 0.88rem;
+  }
+
+  .intro {
+    font-size: 0.28rem;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.16rem;
+    margin-top: 0.4rem;
+  }
+
+  .card {
+    padding: 0.3rem 0.28rem 0.2rem;
+  }
+
+  .card h4 {
+    font-size: 0.3rem;
+  }
+
+  .row,
+  .card li {
+    font-size: 0.25rem;
+    padding-top: 0.14rem;
+    padding-bottom: 0.14rem;
+  }
+
+  .row dd {
+    max-width: 55%;
+  }
+
+  .card li {
+    padding-left: 0.4rem;
+  }
+
+  .card li::before {
+    top: 0.3rem;
+    width: 0.2rem;
+  }
+
+  .badge {
+    display: inline-block;
+    margin: 0.06rem 0 0 0.1rem;
+    font-size: 0.2rem;
+  }
+
+  .footnote {
+    font-size: 0.22rem;
+  }
+}

@@ -147,6 +147,91 @@
   font-variant-numeric: tabular-nums;
 }
 
+/* Desktop: headline and figures around the full, uncropped chassis picture. */
+@media (min-width: 768px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 2.4rem 1.5rem 1.2rem;
+    background: #0c111e;
+  }
+
+  .label,
+  .stages,
+  .features,
+  .specs,
+  .efficiency {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+  }
+
+  .label {
+    order: 1;
+    align-self: flex-start;
+    margin-bottom: 0.4rem;
+  }
+
+  .stages {
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1rem;
+    width: 100%;
+  }
+
+  .stage {
+    font-size: var(--font-size-8);
+  }
+
+  .stage2,
+  .stage3 {
+    position: relative;
+    opacity: 1;
+  }
+
+  .features {
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1rem 0.5rem;
+    margin-top: 0.3rem;
+  }
+
+  .feature,
+  .efficiency {
+    opacity: 1;
+  }
+
+  .picture {
+    position: relative;
+    inset: auto;
+    order: 4;
+    width: calc(100% + 3rem);
+    height: calc((100vw) * 1350 / 2400);
+    margin: 0.2rem -1.5rem 0;
+    mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+  }
+
+  .specs {
+    order: 5;
+    width: 100%;
+    margin: 0 0 0.6rem;
+  }
+
+  .efficiency {
+    order: 6;
+    width: 100%;
+    height: 4.4rem;
+  }
+
+  .efficiencyItem {
+    width: 33.33%;
+  }
+}
+
 /*
  * Phones: no pinned animation — the three stages are stacked.
  * Row 1 is the artwork with the headline on top and the range figures at the bottom.

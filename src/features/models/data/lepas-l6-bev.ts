@@ -49,7 +49,6 @@ export const lepasL6Bev: ModelDefinition = {
     { type: "rangeMap", modes: ["l6-bev"] },
     l6Interior,
     l6Comfort,
-    { type: "advisor" },
     l6Gallery,
     {
       type: "cta",

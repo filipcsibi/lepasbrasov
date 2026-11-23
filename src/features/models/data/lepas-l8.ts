@@ -1,14 +1,41 @@
+import { getLanding } from "@/features/test-drive/config";
 import type { ModelDefinition } from "../types";
 
 const m = (file: string) => `/media/models/l8/${file}`;
+
+/** Launch offer: the same prices as the test-drive landing page. */
+const { list, launch } = getLanding("lepas-l8")!.price;
 
 export const lepasL8: ModelDefinition = {
   slug: "lepas-l8",
   messagesKey: "lepasL8",
   background: "#0c111e",
+  specSheet: {
+    contentKey: "specSheet",
+    actions: [
+      { labelKey: "actions.offer", href: { pathname: "/contact", query: { model: "lepas-l8" } } },
+      { labelKey: "actions.testDrive", href: { pathname: "/test-drive/[model]", params: { model: "lepas-l8" } } },
+    ],
+  },
   sections: [
     {
       type: "hero",
+      eyebrowKey: "eyebrow",
+      titleKey: "name",
+      subtitleKey: "subtitle",
+      price: {
+        amount: launch ?? list,
+        oldAmount: launch ? list : undefined,
+        labelKey: "price.label",
+        noteKey: "price.note",
+      },
+      action: {
+        labelKey: "actions.testDrive",
+        href: { pathname: "/test-drive/[model]", params: { model: "lepas-l8" } },
+      },
+      secondaryActions: [
+        { labelKey: "actions.equipment", href: { pathname: "/models/[slug]/equipment", params: { slug: "lepas-l8" } } },
+      ],
       slides: [
         { src: m("1764062236211696.jpg"), mobileSrc: m("1764062245625429.jpg") },
         { src: m("1764062198855967.jpg"), mobileSrc: m("1764062208264062.jpg") },
@@ -34,11 +61,6 @@ export const lepasL8: ModelDefinition = {
           swatch: m("1764065214716214.png"),
           ring: "#736c94",
           image: { src: m("1764065224317588.jpg"), mobileSrc: m("1764065232647758.jpg") },
-        },
-        {
-          swatch: m("1764065078492714.png"),
-          ring: "#9e9e9e",
-          image: { src: m("1764065119021765.jpg"), mobileSrc: m("1764065133153324.jpg") },
         },
         {
           swatch: m("1764064966803766.png"),
@@ -78,15 +100,19 @@ export const lepasL8: ModelDefinition = {
       slides: [
         {
           video: m("1764139503026712.mp4"),
-          image: { src: m("1764065659726770.jpg") },
+          image: { src: m("poster_flexible.jpg"), mobileSrc: m("1764065659726770.jpg") },
           titleKey: "interior.flexibleSpace",
         },
         {
           video: m("1764065614053401.mp4"),
-          image: { src: m("1764065594211466.jpg") },
+          image: { src: m("poster_windshield.jpg"), mobileSrc: m("1764065594211466.jpg") },
           titleKey: "interior.windshield",
         },
-        { video: m("1764065432777914.mp4"), image: { src: m("1764065403246003.jpg") }, titleKey: "interior.seats" },
+        {
+          video: m("1764065432777914.mp4"),
+          image: { src: m("poster_seats.jpg"), mobileSrc: m("1764065403246003.jpg") },
+          titleKey: "interior.seats",
+        },
       ],
     },
     {
@@ -130,9 +156,9 @@ export const lepasL8: ModelDefinition = {
         { icon: m("icon2.png"), labelKey: "power.longRange" },
       ],
       specs: [
-        { labelKey: "specs.eRange", value: 103, unit: "km" },
-        { labelKey: "specs.combinedRange", value: 1200, unit: "km", prefix: "over" },
-        { labelKey: "specs.combinedFuel", value: 1.49, decimals: 2, unit: "L/100km" },
+        { labelKey: "specs.eRange", value: 90, unit: "km" },
+        { labelKey: "specs.combinedRange", value: 1040, unit: "km" },
+        { labelKey: "specs.combinedFuel", value: 2.2, decimals: 1, unit: "L/100km" },
       ],
       efficiency: [
         {
@@ -143,7 +169,7 @@ export const lepasL8: ModelDefinition = {
           image: m("engine_e1.png"),
           spec: { labelKey: "specs.mechanicalEfficiency", value: 97.6, decimals: 1, unit: "%" },
         },
-        { image: m("engine_e2.png"), spec: { labelKey: "specs.electricRange", value: 100, unit: "km" } },
+        { image: m("engine_e2.png"), spec: { labelKey: "specs.electricRange", value: 90, unit: "km" } },
       ],
     },
     {
@@ -158,7 +184,7 @@ export const lepasL8: ModelDefinition = {
         },
         {
           video: m("1764068301978634.mp4"),
-          image: { src: m("1764068280732549.jpg") },
+          image: { src: m("poster_surround.jpg"), mobileSrc: m("1764068280732549.jpg") },
           titleKey: "driving.surroundTitle",
         },
       ],
